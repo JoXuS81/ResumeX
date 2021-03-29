@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+
+<!-- Website/Template Language -->
+<html lang = "en">
+
+
+    <head>
+        <meta charset = "utf-8">
+
+        <!-- Description, important for SEO -->
+        <meta name = "description" content = "Adam Domani is a designer with more than five years of experience in web design industry.">
+
+        <!-- Keywords -->
+        <meta name = "keywords" content = "Designer, Web, Design, Industry, Experience, Companies, Blog, Resume">
+
+        <!-- Suiting for different device sizes -->
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0">
+
+        <!-- For quality view on Internet Explorer -->
+        <meta http-equiv = "X-UA-Compatible" content = "ie=edge">
+        <link rel = "icon" type = "image/png" href = "Images/Title_Bar/ResumeX.png">
+        <link rel = "stylesheet" type = "text/css" href = "SCSS/Bootstrap/bootstrap.css">
+        <link rel = "stylesheet" type = "text/css" href = "SCSS/Bootstrap/bootstrap.min.css">
+        <link rel = "stylesheet" type = "text/css" href = "SCSS/Bootstrap/bootstrap-grid.css">
+        <link rel = "stylesheet" type = "text/css" href = "SCSS/Bootstrap/bootstrap-grid.min.css">
+        <link rel = "stylesheet" type = "text/css" href = "SCSS/Bootstrap/bootstrap-reboot.css">
+        <link rel = "stylesheet" type = "text/css" href = "SCSS/Bootstrap/bootstrap-reboot.min.css">
+        <link rel = "stylesheet" href = "SCSS/style.css">
+        <link rel = "preload" href = "Fonts/Gugi/Gugi-Regular.ttf" as = "font" type = "font/ttf" crossorigin>
+        <title>
+            ResumeX - Your Digital CV
+        </title>
+
+
+<!-- 
+        
+******************        
+COPYRIGHT, SOURCES
+****************** 
+
+1. Add !important rule to jquery ->> https://stackoverflow.com/questions/2655925/how-to-apply-important-using-css (David says reinstate Monica)
+2. After and Before Elements, Add Content ->> https://stackoverflow.com/questions/35180361/css-before-and-after-not-working (GMChris)
+3. Atom ->> https://www.freepik.com/free-vector/red-atom-with-core-orbits-electrons-isolated-3d-nuclear-chemistry-technology-concept_10817246.htm#page=1&query=Atom&position=0 (zaie)
+4. Background Image, Responsive ->> https://stackoverflow.com/questions/12609110/responsive-css-background-images (Pnsadeghy)
+5. Bootstrap 5 ->> https://v5.getbootstrap.com/
+6. Bootstrap 5, Breakpoints ->> https://getbootstrap.com/docs/5.0/layout/breakpoints/
+7. Bootstrap 5, Reorder ->> https://medium.com/javascript-in-plain-english/bootstrap-5-ordering-columns-and-gutters-a27190695b1f
+8. Button Padding, Fit in the Div ->> https://stackoverflow.com/questions/20757646/button-not-staying-within-div (Zaheer Ahmed)
+9. Calculating ->> Calculator
+10. Center Images ->> https://www.w3schools.com/howto/howto_css_image_center.asp
+11. Close Icon ->> Close Icon
+12. Code Mistakes ->> VSC
+13. Copyright Symbol ->> MS Word
+14. Create Gradients ->> https://cssgradient.io/
+15. Crop a Circle in Image ->> https://crop-circle.imageonline.co/
+16. Crop Images ->> https://imageresizer.com/
+17. CSS, Scale ->> https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/scale()
+18. Desktop or Laptop, Img ->> https://unsplash.com/photos/Vdf-3D6w9cY (Sven Mieke)
+19. Desktop or Laptop, Text ->> https://www.techradar.com/news/laptop-vs-desktop-which-should-you-buy
+20. Earphones ->> https://unsplash.com/photos/d6dxQwmxV2Q (Ben Kolde)
+21. Earphones, Instagram_1 ->> https://unsplash.com/photos/y8v7HIDvaWs (White Field Photo)
+22. Earphones, Instagram_2 ->> https://pixabay.com/photos/earphones-the-music-background-4839691/ (Fotorech)
+23. Earphones, Instagram_3 ->> https://unsplash.com/photos/Qrspubmx6kE (Frank Septilion)
+24. Earphones, Instagram_4 ->> https://pixabay.com/photos/headphones-headset-audio-technology-690685/ (Free-Photos)
+25. Earphones, Text ->> https://www.pcmag.com/picks/the-best-headsets-and-headphones-for-your-home-office
+26. Facebook ->> https://www.freepik.com/free-icon/facebook_810215.htm#page=1&query=Facebook&position=7 (flaticon)
+27. Filterable Portfolio ->> https://www.youtube.com/watch?v=ZjrqnxDEkzA
+28. Fonts ->> Google Fonts
+29. Graphic Design, Icon ->> https://www.flaticon.com/free-icon/school-supplies_120128 (Freepik)
+30. Grid System ->> https://www.w3schools.com/css/tryit.asp?filename=trycss_grid
+31. Hamburger Menu ->> https://www.youtube.com/watch?v=BN6fH1nRDxA	
+32. Head ->> https://unsplash.com/photos/2_cjSok8wHc (Keitravis Squire)
+33. Help ->> PC Elements
+34. Home, Background ->> https://www.freepik.com/free-vector/abstract-pink-shade-fluid-shape-background_9191762.htm#page=1&query=Curve%20Shapes&position=18 (starline)
+35. Icons ->> Font Awesome
+36. Inline Block Element ->> https://stackoverflow.com/questions/11963780/displayinline-not-working/40428537 (matsko)
+37. Instagram ->> https://www.freepik.com/free-icon/instagram_810212.htm#page=1&query=Instagram&position=1 (freepik)
+38. jQuery ->> https://jquery.com/
+39. jQuery, CSS ->> https://www.w3schools.com/jquery/jquery_css.asp
+40. jQuery, Hide and Show ->> https://www.w3schools.com/jquery/jquery_hide_show.asp
+41. Layout Help ->> Mozilla
+42. Linkedin ->> https://www.freepik.com/free-icon/linkedin_810075.htm#page=1&query=Linkedin&position=6 (flaticon)
+43. Loader ->> https://codepen.io/redlabor/pen/idHeG
+44. Mcsa, Web Applications ->> https://docs.microsoft.com/en-us/learn/certifications/mcsa-web-applications-certification
+45. Multicolor Border ->> https://stackoverflow.com/questions/38137476/how-to-create-border-bottom-with-2-different-color (Mohammad Usman)
+46. New York, Phone Codes ->> http://dialcode.org/North_America/United_States/New_York/
+47. New York University ->> http://www.nyu.edu/
+48. NY, Address ->> https://www.nycgo.com/attractions/city-hall/
+49. Popper ->> https://popper.js.org/
+50. Prevent Default ->> https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault
+51. Pseudo Element After, Before, Syntax ->> https://developer.mozilla.org/en-US/docs/Web/CSS/::after
+52. React, Instagram 1 ->> https://unsplash.com/photos/5-KmbSe5ivg (Unsplash)
+53. React, Instagram 2 ->> https://unsplash.com/photos/IKUYGCFmfw4 (Blake Connally)
+54. React, Instagram 3 ->> https://unsplash.com/photos/V_MdomV6Kbg (Mark Farias)
+55. React, Instagram 4 ->> https://unsplash.com/photos/U0tBTn8UR8I (AltumCode)
+56. React Text ->> https://reactjs.org/
+57. Reset Page to Top ->> https://stackoverflow.com/questions/11486527/reload-browser-does-not-reset-page-to-top (Nikola Anusev)
+58. Resume ->> http://graphicdesignjunction.com/2020/04/free-resume-template-3-page-cv-template/
+59. Screen Icon ->> https://www.freepik.com/free-icon/responsive-design-symbol_773233.htm#page=1&query=Screen&position=5 (freepik)
+60. Search ->> https://www.freepik.com/free-icon/magnifiying-glass_862133.htm#page=1&query=Search&position=16 (Freepik)
+61. Search Form ->> https://mdbootstrap.com/docs/jquery/forms/search/
+62. Search, Highlight Text ->> http://jsfiddle.net/x8rpY/1/
+63. Shanghai, Icon ->> https://www.flaticon.com/free-icon/shanghai-world-financial-center_1000 (Freepik)
+64. Shanghai University ->> http://shu.admissions.cn/
+65. Shuffle Items ->> https://vestride.github.io/Shuffle/
+66. Statue of Liberty, Icon ->> https://www.flaticon.com/free-icon/statue-of-liberty_82297 (Freepik)
+67. Streets, Shanghai ->> https://www.chinahighlights.com/shanghai/article-old-streets.htm
+68. Tokyo, Icon ->> https://www.flaticon.com/free-icon/tokyo-tower_64273 (Freepik)
+69. Tokyo, Streets ->> https://livejapan.com/en/article-a0001657/
+70. Tools, Instagram 1 ->> https://unsplash.com/photos/YtDIYzUAG9Q (Boicu Andrei)
+71. Tools, Instagram 2 ->> https://unsplash.com/photos/0DJHJcpwN9Q (Boitumelo Phetla)
+72. Tools, Instagram 3 ->> https://unsplash.com/photos/5-KmbSe5ivg (Unsplash)
+73. Tools, Instagram 4 ->> https://unsplash.com/photos/MDPg0yw4M1c (Batu Gezer)
+74. Twitter ->> https://www.freepik.com/free-icon/twitter_810218.htm#page=1&query=Twitter&position=5 (flaticon)
+75. UX/UI Design ->> https://unsplash.com/photos/BKyvWG7D6QA (Zan)
+76. UX/UI, Instagram_1 ->> https://unsplash.com/photos/w33-zg-dNL4 (Rami Al-zayat)
+77. UX/UI, Instagram_2 ->> https://unsplash.com/photos/mr4JG4SYOF8 (Alexander Shatov)
+78. UX/UI, Instagram_3 ->> https://unsplash.com/photos/d0ycMhfRpME (radovan)
+79. UX/UI, Instagram_4 ->> https://pixabay.com/photos/phone-display-apps-applications-292994/ (LoboStudioHamburg)
+80. UX/UI, Text ->> https://careerfoundry.com/en/blog/ux-design/the-difference-between-ux-and-ui-design-a-laymans-guide/
+81. Window, Load ->> https://stackoverflow.com/questions/38650315/why-window-load-is-not-working-in-jquery (Bhojendra Rauniyar)
+82. Works, Design 1 ->> https://unsplash.com/photos/DFPLAG6BWDc (Possessed Photography)
+83. Works, Design 2 ->> https://pixabay.com/illustrations/background-circuit-grey-digital-2426328/ (3mikey5000)
+84. Works, Design 3 ->> https://unsplash.com/photos/5sF6NrB1MEg (Caleb George)
+85. Works, Design 4 ->> https://unsplash.com/photos/trYl7JYATH0 (Josh Rose)
+86. Works, Design 5 ->> https://unsplash.com/photos/MAhPucR_Hq4 (Harley-Davidson)
+87. Works, Design 6 ->> https://unsplash.com/photos/zj475haUy2M (Gemma Evans)
+
+
+*****************
+TABLE OF CONTENTS
+*****************
+
+1. Body
+ 1.1 Loader
+ 1.2 Content without Loader 
+  1.2.1 Home
+   1.2.1.1 Menu 
+   1.2.1.2 Social and Search Bar
+   1.2.1.3 Image and Info
+  1.2.2 About 
+   1.2.2.1 Left Side 
+   1.2.2.2 Right Side
+  1.2.3 Education
+   1.2.3.1 Left Side
+   1.2.3.2 Right Side
+  1.2.4 Skills
+   1.2.4.1 Left Side 
+   1.2.4.2 Right Side
+  1.2.5 Works
+   1.2.5.1 Navbar 
+   1.2.5.2 Images
+  1.2.6 Blog 
+   1.2.6.1 Heading
+   1.2.6.2 React 
+   1.2.6.3 Tools
+   1.2.6.4 Earphones 
+   1.2.6.5 UX/UI
+  1.2.7 Contact
+   1.2.7.1 Heading
+   1.2.7.2 Left Side
+   1.2.7.3 Right Side
+  1.2.8 Footer
+   1.2.8.1 Social Icons
+ 1.3 JavaScript Connections
+
+-->
+    </head>
+
+
+    <!-- BODY -->
+    <body>
+
+
+        <!-- LOADER -->
+        <section class = "d-flex align-items-center justify-content-center loader">
+            <div>
+                <h5>ADAM DOMANI - WEB DESIGNER</h5>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span class = "circle"></span>
+            </div>
+        </section>
+
+        <!-- CONTENT WITHOUT LOADER -->
+        <div class = "content">
+
+
+            <div class = "back">
+                <a href = "../../index.html">
+                    <img class = "img-fluid" src = "Images/Body/Back.png" alt = "Back to Home">
+                </a>
+            </div>
+
+
+            <!-- HOME -->
+            <section class = "home" id = "home_anchor">
+                <div class = "m-0 p-0 row top">
+                    <!-- Menu -->
+                    <div class = "col-xl-6 col-lg-12 d-flex justify-content-center justify-content-xl-start align-items-center m-0 p-0 menu">
+                        <div class = "resume">
+                            <h4>
+                                ResumeX
+                            </h4>
+                        </div>
+                        <div class = "menu_area">
+                            <ul>
+                                <li class = "hamb ho">
+                                    <a href = "#" class = "menu_click">
+                                        Home
+                                    </a>
+                                </li>
+                                <li class = "hamb about">
+                                    <a href = "#about_anchor" class = "navbar_about menu_click">
+                                        About
+                                    </a>
+                                </li>
+                                <li class = "hamb">
+                                    <a href = "#education_anchor" class = "navbar_education menu_click">
+                                        Education
+                                    </a>
+                                </li>
+                                <li class = "hamb">
+                                    <a href = "#skills_anchor" class = "navbar_skills menu_click">
+                                        Skills
+                                    </a>
+                                </li>
+                                <li class = "hamb">
+                                    <a href = "#works_anchor" class = "navbar_works menu_click">
+                                        Works
+                                    </a>
+                                </li>
+                                <li class = "blog hamb">
+                                    <a href = "#blog_anchor" class = "navbar_blog menu_click">
+                                        Blog
+                                    </a>
+                                </li>
+                                <li class = "contact hamb">
+                                    <a href = "#contact_anchor" class = "navbar_contact menu_click">
+                                        Contact
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Hamburger Menu -->
+                        <div class = "home_hamburger">
+                            <div class = "home_line home_lineTop">
+                            </div>
+                            <div class = "home_line home_lineMiddle">
+                            </div>
+                            <div class = "home_line home_lineBottom">
+                            </div>
+                        </div> 
+                    </div>
+                    <!-- Social and Search Bar -->
+                    <div class = "col-xl-6 col-lg-12 d-flex justify-content-xl-end justify-content-center m-0 p-0">
+                        <div class = "d-flex align-items-center social">
+                            <div>
+                                <a href = "https://www.facebook.com/" class = "fa">
+                                    <img class = "img-fluid" src = "Images/Home/Facebook.png" alt = "Facebook">
+                                </a>
+                                <a href = "https://twitter.com/">
+                                    <img class = "img-fluid" src = "Images/Home/Twitter.png" alt = "Twitter">
+                                </a>
+                                <a href = "https://www.linkedin.com/">
+                                    <img class = "img-fluid" src = "Images/Home/Linkedin.png" alt = "Linkedin">
+                                </a>
+                                <a href = "https://www.instagram.com/">
+                                    <img class = "img-fluid" src = "Images/Home/Instagram.png" alt = "Instagram">
+                                </a>
+                            </div>
+                        </div>
+                        <div class = "d-flex align-items-center search">
+                            <a href = "#">
+                                <img class = "img-fluid searchImg" src = "Images/Home/Search.png" alt = "Search">
+                            </a>
+                            <img class = "img-fluid close" src = "Images/Home/Close.png" alt = "Close">
+                            <div class = "form">
+                                <form class = "form-inline d-flex justify-content-center md-form form-sm mt-0">
+                                    <input class = "form-control form-control-sm ml-3 w-75 sear" type = "text" placeholder = "Search"
+                                    aria-label = "Search" id = "searchfor">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Image and Info -->
+                <div class = "m-0 p-0 row holder">
+                    <div class = "col-xl-2 col-12 d-flex justify-content-xl-end justify-content-center align-items-center m-0 p-0 adam">
+                        <img class = "img-fluid img" src = "Images/Home/Adam.png" alt = "Adam">
+                    </div>
+                    <div class = "col-xl-2 col-12 d-flex justify-content-center justify-content-xl-start m-0 p-0 designer">
+                        <div>
+                            <p class = "web_designer" id = "web">
+                                WEB DESIGNER
+                            </p> 
+                            <h2 class = "domani" id = "adam_domani">
+                                Adam Domani
+                            </h2>
+                            <div class = "d-flex justify-content-center justify-content-xl-start">
+                                <p class = "info">
+                                    I am a designer with more than five years of experience in web design industry. I worked for the largest companies in the world. To see my portfolio, please visit Works section. 
+                                </p>
+                            </div>
+                            <div class = "d-flex justify-content-center justify-content-xl-start">
+                                <div>
+                                    <a href = "PDF/CV.pdf">
+                                        Download CV
+                                    </a>
+                                    <a href = "#contact_anchor" class = "button button_home">
+                                        Contact
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- ABOUT -->
+            <section class = "about_section" id = "about_anchor">
+                <div class = "m-0 p-0 row content_area">
+                    <!-- Left Side -->
+                    <div class = "col-xl-6 d-flex align-items-center mb-0 ml-0 mr-0 order-last order-xl-first p-0 left_about">
+                        <div class = "skills">
+                            <div class = "design">
+                                <div class = "d-flex align-items-center justify-content-center h-100">
+                                    <div class = "m-0 p-0">
+                                        <div class = "d-flex justify-content-center">
+                                            <img class = "img-fluid" src = "Images/About/Screen.png" alt = "Screens">
+                                        </div>
+                                        <h5>
+                                            UI/UX Design
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class = "graphic">
+                                <div class = "d-flex align-items-center justify-content-center h-100">
+                                    <div class = "m-0 p-0">
+                                        <div class = "d-flex justify-content-center">
+                                            <img class = "img-fluid" src = "Images/About/Graphic.png" alt = "Graphic Design">
+                                        </div>
+                                        <h5>
+                                            Graphic Design
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Right Side -->
+                    <div class = "col-xl-6 d-flex justify-content-center justify-content-xl-end order-first order-xl-last m-0 p-0 right_about">
+                        <div class = "info">
+                            <h1>
+                                ABOUT
+                            </h1>
+                            <h5 class = "modern">
+                                You need a modern web design?
+                            </h5>
+                            <h5 class = "help">
+                                I am here to help.
+                            </h5>
+                            <div class = "d-flex justify-content-center justify-content-xl-end">
+                                <p>
+                                    For more than five years I work on complex web design projects. I am the best with the 
+                                    <span>Figma</span>
+                                    , but my other favourite tool is 
+                                    <span>AdobeXD</span>
+                                    . I am very detailed in my work, with purpose to achieve high quality output results.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- EDUCATION -->
+            <section class = "education_section" id = "education_anchor">
+                <div class = "align-items-center d-flex mb-0 ml-0 mr-0 p-0 row content_area">
+                    <!-- Left Side -->
+                    <div class = "col-xl-6 m-0 p-0">
+                        <div class = "info">
+                            <h1>
+                                EDUCATION
+                            </h1>
+                            <h5 class = "quality">
+                                I have a quality education.
+                            </h5>
+                            <h5 class = "path">
+                                Check my educational path.
+                            </h5>
+                            <div class = "d-flex justify-content-center justify-content-xl-start">
+                                <p>
+                                    My educational path started in 2014 and 2015, when I successfully passed a 
+                                    <span>
+                                        MCSA 
+                                    </span>
+                                    test in Web Applications. Later, I was educated on New York and Shanghai University in 
+                                    <span>
+                                        Computer 
+                                    </span>
+                                    Science and Web 
+                                    <span>
+                                        Design.
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Right Side -->
+                    <div class = "col-xl-6 d-flex justify-content-center justify-content-xl-end mb-0 ml-0 mr-0 pl-0 pr-0 right">
+                        <div>
+                            <div class = "align-items-center d-flex achievements_top">
+                                <div class = "top_area">
+                                    <h5 class = "university_certificate">
+                                        Shanghai University
+                                    </h5>
+                                    <h5>
+                                        Master Degree in Web Design
+                                    </h5>
+                                    <h3>
+                                        2019 - 2020
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class = "align-items-center d-flex achievements_middle">
+                                <div class = "middle_area">
+                                    <h5 class = "university_certificate">
+                                        New York University
+                                    </h5>
+                                    <h5>
+                                        Bachelor Degree, Comp. Science
+                                    </h5>
+                                    <h3>
+                                        2015 - 2019
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class = "align-items-center d-flex achievements_bottom">
+                                <div class = "bottom_area">
+                                    <h5 class = "university_certificate">
+                                        Web Applications
+                                    </h5>
+                                    <h5>
+                                        MCSA Certificate
+                                    </h5>
+                                    <h3>
+                                        2014 - 2015
+                                    </h3>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- SKILLS -->
+            <section class = "skills_section" id = "skills_anchor">
+                <div class = "align-items-center d-flex mb-0 ml-0 mr-0 p-0 row content_area">
+                    <!-- Left Side -->
+                    <div class = "col-xl-6 d-flex justify-content-center justify-content-xl-start mb-0 ml-0 mr-0 pl-0 pr-0 left">
+                        <div>
+                            <div class = "d-flex justify-content-center justify-content-xl-start">
+                                <div class = "jobs">
+                                    <h4>
+                                        1000+
+                                    </h4>
+                                    <h5>
+                                        Jobs Done
+                                    </h5>
+                                </div>
+                                <div class = "clients">
+                                    <h4>
+                                        50+
+                                    </h4>
+                                    <h5>
+                                        Clients
+                                    </h5>
+                                </div>
+                                <div class = "awards">
+                                    <h4>
+                                        10
+                                    </h4>
+                                    <h5>
+                                        Awards
+                                    </h5>
+                                </div>
+                            </div>
+                            <div class = "bars">
+                                <div>
+                                    <h5>
+                                        WEB DESIGN
+                                    </h5>
+                                    <img class = "img-fluid skill_90" src = "Images/Skills/Comment.png" alt = "Skill Percent">
+                                    <div class = "design">
+                                        <div class = "skill">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class = "prototyping">
+                                    <h5>
+                                        PROTOTYPING
+                                    </h5>
+                                    <img class = "img-fluid skill_80" src = "Images/Skills/Comment_80.png" alt = "Skill Percent">
+                                    <div class = "prototype">
+                                        <div class = "skill">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class = "wireframing">
+                                    <h5>
+                                        WIREFRAMING
+                                    </h5>
+                                    <img class = "img-fluid skill_70" src = "Images/Skills/Comment_70.png" alt = "Skill Percent">
+                                    <div class = "wireframe">
+                                        <div class = "skill">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Right Side -->
+                    <div class = "col-xl-6 d-flex justify-content-center justify-content-xl-end m-0 order-first order-xl-last p-0">
+                        <div class = "info">
+                            <h1>
+                                SKILLS
+                            </h1>
+                            <h5 class = "web">
+                                My skills relate to web design.
+                            </h5> 
+                            <h5 class = "work">
+                                Wireframes, prototypes.
+                            </h5>
+                            <div class = "d-flex justify-content-center justify-content-xl-end">
+                                <p>
+                                    I mostly work with design for different webpages. Very important element of my work is wireframing and prototyping. For these purposes I use 
+                                    <span>Figma</span> and 
+                                    <span>
+                                        Wireframe CC
+                                    </span> apps.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- WORKS -->
+            <section class = "works_section" id = "works_anchor">
+                <h1>
+                    WORKS
+                </h1>
+                <!-- Navbar -->
+                <div class = "navbar">
+                    <ul class = "mb-0 mr-0 p-0 row">
+                        <li class = "align-items-center col-xl-3 d-flex justify-content-center all first list" data-filter = "all">   
+                            All
+                        </li>
+                        <li class = "align-items-center col-xl-3 d-flex justify-content-center list second works_design" data-filter = "design">
+                            Design
+                        </li>
+                        <li class = "align-items-center col-xl-3 d-flex justify-content-center list third works_figma" data-filter = "figma">
+                            Figma
+                        </li>
+                        <li class = "align-items-center col-xl-3 d-flex justify-content-center fourth list works_ux" data-filter = "ux">
+                            UX/UI
+                        </li>
+                    </ul>
+                </div>
+                <!-- Images -->
+                <div class = "images">
+                    <div class = "mb-0 mt-0 p-0 row block">
+                        <div class = "col-12 col-md-6 itemBox des1 design left">
+                            <div class = "img_area">
+                                <img class = "img-fluid" src = "Images/Works/Design_1.jpg" alt = "Design 1">
+                            </div>
+                        </div>
+                        <div class = "col-12 col-md-6 itemBox des2 design right">
+                            <div class = "img_area">
+                                <img class = "img-fluid" src = "Images/Works/Design_2.jpg" alt = "Design 2">
+                            </div>
+                        </div>
+                        <div class = "col-12 col-md-6 itemBox des3 figma left">
+                            <div class = "img_area">
+                                <img class = "img-fluid" src = "Images/Works/Design_3.png" alt = "Design 3">
+                            </div>
+                        </div>
+                        <div class = "col-12 col-md-6 itemBox des4 figma right">
+                            <div class = "img_area">
+                                <img class = "img-fluid" src = "Images/Works/Design_4.png" alt = "Design 4">
+                            </div>
+                        </div>
+                        <div class = "col-12 col-md-6 itemBox des5 ux left">
+                            <div class = "img_area">
+                                <img class = "img-fluid" src = "Images/Works/Design_5.jpg" alt = "Design 5">
+                            </div>
+                        </div>
+                        <div class = "col-12 col-md-6 itemBox des6 ux right">
+                            <div class = "img_area">
+                                <img class = "img-fluid" src = "Images/Works/Design_6.jpg" alt = "Design 6">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- BLOG -->
+            <section class = "blog_section" id = "blog_anchor">
+                <div class = "mb-0 ml-0 mr-0 p-0 row content_area">
+                    <!-- Heading -->
+                    <div class = "col-xl-12 d-flex justify-content-center justify-content-xl-end mb-0 ml-0 mr-0 pl-0 pr-0 heading">
+                        <h1>
+                            BLOG
+                        </h1>
+                    </div>
+                    <!-- React -->
+                    <div class = "col-lg-6 col-xl-6 d-flex justify-content-center justify-content-xl-start mb-0 ml-0 mr-0 pl-0 pr-0 left_blog react_area">
+                        <div>
+                            <div class = "d-flex justify-content-center justify-content-xl-start blog_area">
+                                <div class = "info">
+                                    <div class = "align-items-center d-flex justify-content-center small_info">
+                                        <h5 class = "text">
+                                            React
+                                        </h5>
+                                    </div>
+                                    <img class = "img-fluid image" src = "Images/Blog/Atom.png" alt = "React">
+                                    <div class = "info_area">
+                                        <h4>
+                                            Why is React so Good?
+                                        </h4>
+                                        <div class = "m-0 p-0 row">
+                                            <div class = "col-6 m-0 p-0">
+                                                <h5>
+                                                    23.01.2021
+                                                </h5>
+                                            </div>
+                                            <div class = "col-6 d-flex justify-content-end m-0 p-0">
+                                                <h5 class = "author">
+                                                    By Adam Domani
+                                                </h5>
+                                            </div>
+                                        </div>
+                                        <div class = "button">
+                                            <div class = "align-items-center d-flex justify-content-center">
+                                                <img class = "img-fluid" src = "Images/Blog/Arrow.png" alt = "Arrow">
+                                                <a href = "HTML/react.html">
+                                                    Read More
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Tools -->
+                    <div class = "col-lg-6 col-xl-6 d-flex justify-content-center justify-content-xl-end mb-0 ml-0 mr-0 pl-0 pr-0 right_blog">
+                        <div>
+                            <div class = "d-flex justify-content-center justify-content-xl-start blog_area">
+                                <div class = "info">
+                                    <div class = "align-items-center d-flex justify-content-center small_info">
+                                        <h5 class = "text">
+                                            Tools
+                                        </h5>
+                                    </div>
+                                    <img class = "img-fluid image" src = "Images/Blog/Desktop_Laptop.png" alt = "Desktop, Laptop">
+                                    <div class = "info_area">
+                                        <h4>
+                                            Desktop or Laptop for 2021?
+                                        </h4>
+                                        <div class = "m-0 p-0 row">
+                                            <div class = "col-6 m-0 p-0">
+                                                <h5>
+                                                    26.01.2021
+                                                </h5>
+                                            </div>
+                                            <div class = "col-6 d-flex justify-content-end m-0 p-0">
+                                                <h5 class = "author">
+                                                    By Adam Domani
+                                                </h5>
+                                            </div>
+                                        </div>
+                                        <div class = "button">
+                                            <div class = "align-items-center d-flex justify-content-center">
+                                                <img class = "img-fluid" src = "Images/Blog/Arrow.png" alt = "Arrow">
+                                                <a href = "HTML/tools.html">
+                                                    Read More
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Earphones -->
+                    <div class = "col-lg-6 col-xl-6 d-flex justify-content-center justify-content-xl-start mb-0 ml-0 mr-0 pl-0 pr-0 earphones">
+                        <div>
+                            <div class = "d-flex justify-content-center justify-content-xl-start blog_area">
+                                <div class = "info">
+                                    <div class = "align-items-center d-flex justify-content-center small_info">
+                                        <h5 class = "text">
+                                            Earphones
+                                        </h5>
+                                    </div>
+                                    <img class = "img-fluid image" src = "Images/Blog/Earphones.png" alt = "Earphones">
+                                    <div class = "info_area">
+                                        <h4>
+                                            Earphones for Quality Work
+                                        </h4>
+                                        <div class = "m-0 p-0 row">
+                                            <div class = "col-6 m-0 p-0">
+                                                <h5>
+                                                    28.01.2021
+                                                </h5>
+                                            </div>
+                                            <div class = "col-6 d-flex justify-content-end m-0 p-0">
+                                                <h5 class = "author">
+                                                    By Adam Domani
+                                                </h5>
+                                            </div>
+                                        </div>
+                                        <div class = "button">
+                                            <div class = "align-items-center d-flex justify-content-center">
+                                                <img class = "img-fluid" src = "Images/Blog/Arrow.png" alt = "Arrow">
+                                                <a href = "HTML/earphones.html">
+                                                    Read More
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- UX/UI -->
+                    <div class = "col-lg-6 col-xl-6 d-flex justify-content-center justify-content-xl-end mb-0 ml-0 mr-0 pl-0 pr-0 ux">
+                        <div>
+                            <div class = "d-flex justify-content-center justify-content-xl-start blog_area">
+                                <div class = "info">
+                                    <div class = "align-items-center d-flex justify-content-center small_info">
+                                        <h5 class = "text">
+                                            UX/UI
+                                        </h5>
+                                    </div>
+                                    <img class = "img-fluid image" src = "Images/Blog/UXUI_Design.png" alt = "UX/UI">
+                                    <div class = "info_area">
+                                        <h4>
+                                            Future of the UX/UI
+                                        </h4>
+                                        <div class = "m-0 p-0 row">
+                                            <div class = "col-6 m-0 p-0">
+                                                <h5>
+                                                    29.01.2021
+                                                </h5>
+                                            </div>
+                                            <div class = "col-6 d-flex justify-content-end m-0 p-0">
+                                                <h5 class = "author">
+                                                    By Adam Domani
+                                                </h5>
+                                            </div>
+                                        </div>
+                                        <div class = "button">
+                                            <div class = "align-items-center d-flex justify-content-center">
+                                                <img class = "img-fluid" src = "Images/Blog/Arrow.png" alt = "Arrow">
+                                                <a href = "HTML/ux.html">
+                                                    Read More
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- CONTACT -->
+            <section class = "contact_section" id = "contact_anchor">
+                <div class = "heading_container">
+                    <!-- Heading -->
+                    <h1 class = "heading">
+                        CONTACT
+                    </h1>
+                </div>
+                <div class = "mb-0 p-0 row content_area">
+                    <!-- Left Side -->
+                    <div class = "col-xl-6 left_area">
+                        <div class = "align-items-center d-flex info_block">
+                            <div>
+                                <h5 class = "mail">
+                                    Email
+                                </h5>
+                                <p>
+                                    resume@email.com
+                                </p>
+                                <h5>
+                                    Address
+                                </h5>
+                                <p>
+                                    Broadway and Murray St.
+                                </p>
+                                <h5>
+                                    Phone
+                                </h5>
+                                <p>
+                                    +1 212 123 456 
+                                </p>
+                                <div class = "social_icons">
+                                    <div class = "social">
+                                        <a href = "https://www.facebook.com/">
+                                            <img class = "img-fluid" src = "Images/Contact/Facebook_Light.png" alt = "Facebook">
+                                        </a>
+                                        <a href = "https://twitter.com/">
+                                            <img class = "img-fluid" src = "Images/Contact/Twitter_Light.png" alt = "Twitter">
+                                        </a>
+                                        <a href = "https://www.linkedin.com/">
+                                            <img class = "img-fluid" src = "Images/Contact/Linkedin_Light.png" alt = "Linkedin">
+                                        </a>
+                                        <a href = "https://www.instagram.com/">
+                                            <img class = "img-fluid" src = "Images/Contact/Instagram_Light.png" alt = "Instagram">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Right Side -->
+                    <div class = "col-xl-6 right_area">
+                        <div class = "d-flex justify-content-center icon top">
+                            <img class = "img-fluid" src = "Images/Contact/Statue.png" alt = "Statue of Liberty">
+                        </div>
+                        <h5 class = "location">
+                            New York, USA
+                        </h5>
+                        <p class = "address">
+                            Broadway and Murray St.
+                        </p>
+                        <div class = "d-flex justify-content-center icon">
+                            <img class = "img-fluid" src = "Images/Contact/Shanghai.png" alt = "Shanghai">
+                        </div>
+                        <h5 class = "location">
+                            Shanghai, China
+                        </h5>
+                        <p class = "address">
+                            Sinan Road
+                        </p>
+                        <div class = "d-flex justify-content-center icon">
+                            <img class = "img-fluid" src = "Images/Contact/Tokyo.png" alt = "Tokyo">
+                        </div>
+                        <h5 class = "location">
+                            Tokyo, Japan
+                        </h5>
+                        <p class = "address japan">
+                            Kichijoji Sun Road
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- FOOTER -->
+            <footer>
+                <h4>
+                    RESUME X
+                </h4>
+                <div class = "d-flex justify-content-center">
+                    <!-- Social Icons -->
+                    <div>
+                        <a href = "https://www.facebook.com/">
+                            <img class = "img-fluid" src = "Images/Home/Facebook.png" alt = "Facebook">
+                        </a>
+                        <a href = "https://twitter.com/">
+                            <img class = "img-fluid" src = "Images/Home/Twitter.png" alt = "Twitter">
+                        </a>
+                        <a href = "https://www.linkedin.com/">
+                            <img class = "img-fluid" src = "Images/Home/Linkedin.png" alt = "Linkedin">
+                        </a>
+                        <a href = "https://www.instagram.com/">
+                            <img class = "img-fluid" src = "Images/Home/Instagram.png" alt = "Instagram">
+                        </a>
+                    </div>
+                </div>
+                <h5>
+                    JoX-Themes©, 2021
+                </h5>
+            </footer>
+
+
+        </div>  
+
+
+        <!-- JavaScript Connections -->
+        <script src = 'JS/jquery-3.4.1.min.js'>
+        </script>
+        <script src = 'JS/popper.min.js'>
+        </script>
+        <script src = 'JS/Bootstrap/bootstrap.js'>
+        </script>
+        <script src = 'JS/Bootstrap/bootstrap.min.js'>
+        </script>
+        <script src = 'JS/Bootstrap/bootstrap.bundle.js'>
+        </script>
+        <script src = 'JS/Bootstrap/bootstrap.bundle.min.js'>
+        </script>
+        <script src = 'JS/load.js'>
+        </script>
+        <script src = 'JS/menu.js'>
+        </script>
+        <script src = 'JS/pageTop.js'>
+        </script>
+        <script src = 'JS/search.js'>
+        </script>
+        <script src = 'JS/works.js'>
+        </script>
+        <script src = 'JS/zenscroll-min.js'>
+        </script>
+
+
+    </body>
+
+
+</html>

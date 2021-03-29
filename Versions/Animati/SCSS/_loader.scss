@@ -1,0 +1,143 @@
+/* 
+
+TABLE OF CONTENTS
+
+1. Section Loader
+ 1.1 Text
+ 1.2 Objects
+2. Work with Different Screen Sizes
+
+*/
+
+
+// Section Loader
+.loader {
+    background:$dark;
+    height:100vh;
+    text-align:center;
+    // Text
+    h5 {
+        @include h5;
+        color:$white;
+        font-family:jura;
+        margin:0;
+    }
+    @keyframes loading {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+    }
+    // Objects
+    span {
+        animation:loading 1s infinite alternate;
+        background:$bluegreen;
+        border-radius:5px;
+        display:inline-block;
+        height:10px;
+        margin:15px;
+        vertical-align:middle;
+        width:10px;
+    }
+    span:nth-of-type(2) {
+        animation-delay:0.2s;
+        background:$bluegreen_2;
+    }
+    span:nth-of-type(3) {
+        animation-delay:0.4s;
+        background:$bluegreen_3;
+    }
+    span:nth-of-type(4) {
+        animation-delay:0.6s;
+        background:$bluegreenlight;
+    }
+    span:nth-of-type(5) {
+        animation-delay:0.8s;
+        background:$bluegreenlight2;
+    }
+    span:nth-of-type(6) {
+        animation-delay:1s;
+        background:$bluegreenlight3;
+    }
+    span:nth-of-type(7) {
+        animation-delay:1.2s;
+        background:$white;
+    }
+}
+
+
+.importantRule { 
+    display:none !important; 
+}
+
+
+// Work with Different Screen Sizes
+@media (max-width:350px) {
+    .loader {
+        .circle {
+            display:none;
+        }
+    }
+}
+
+
+@media (min-width:1601px) and (max-width:2000px) {
+    .loader {
+        h5 {
+            @include h5_2000;
+        }
+        span {
+            border-radius:6.2px;
+            height:12.5px;
+            margin:18px;
+            width:12.5px;
+        }
+    }
+}
+
+
+@media (min-width:2001px) and (max-width:2500px) {
+    .loader {
+        h5 {
+            @include h5_2500;
+        }
+        span {
+            border-radius:7.7px;
+            height:15.6px;
+            margin:22px;
+            width:15.6px;
+        }
+    }
+}
+
+
+@media (min-width:2501px) and (max-width:3125px) {
+    .loader {
+        h5 {
+            @include h5_3125;
+        }
+        span {
+            border-radius:9.6px;
+            height:19.5px;
+            margin:27px;
+            width:19.5px;
+        }
+    }
+}
+
+
+@media (min-width:3126px) {
+    .loader {
+        h5 {
+            @include h5_3850;
+        }
+        span {
+            border-radius:12px;
+            height:24px;
+            margin:33px;
+            width:24px;
+        }
+    }
+}

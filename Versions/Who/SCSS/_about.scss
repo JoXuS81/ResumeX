@@ -1,0 +1,505 @@
+/* 
+
+TABLE OF CONTENTS
+
+1. Section About
+ 1.1 Content
+  1.1.1 Left Side
+   1.1.1.1 Skills
+   1.1.1.2 Graphic
+  1.1.2 Right Side
+2. Work with Different Screen Sizes
+
+*/
+
+
+
+// Section About
+.about_section {
+    @include h5;
+    color:$white;
+    display:none;
+    margin-top:125px;
+    // Content
+    .content_area {
+        // Left Side
+        .left_about {
+            .man {
+                margin-left:150px;
+            }
+            // Skills
+            .skills {
+                margin-left:50px;
+                .design {
+                    display:inline-block;
+                    font-family:jura;
+                    margin-left:25px;
+                    h5 {
+                        color:$white;
+                        font-family:jura;
+                        margin-top:10px;
+                        text-align:center;
+                    }
+                }
+                // Graphic
+                .graphic {
+                    display:inline-block;
+                    font-family:jura;
+                    margin-left:25px;
+                    h5 {
+                        color:$white;
+                        margin-top:10px;
+                        text-align:center;
+                    }
+                }
+            }
+        }
+        // Right Side
+        .right_about {
+            .info {
+                margin-right:150px;
+                h1 {
+                    @include h1;
+                    text-align:right;
+                }
+                .help {
+                    color:$white;
+                    font-family:jura;
+                    margin-top:10px;
+                    position:relative;
+                    right:0;
+                    text-align:right;
+                }
+                .modern {
+                    @include h5;
+                    color:$bluegreen;
+                    font-family:jura;
+                    margin-top:15px;
+                    text-align:end;
+                }
+                p {
+                    color:$white;
+                    font-family:rajdhani;
+                    font-size:16px;
+                    margin-bottom:0;
+                    margin-top:10px;
+                    text-align:end;
+                    width:250px;
+                }
+                span {
+                    color:$bluegreen;
+                }
+            }
+        }
+    }
+}
+
+
+// Work with Different Screen Sizes
+@media (max-width:475px) {
+    .about_section {
+        margin-top:150px;
+        .content_area {
+            .left_about {
+                display:flex;
+                justify-content:center;
+                margin-top:75px;
+                .skills {
+                    .design {
+                        background:$black;
+                        height:125px;
+                        margin-left:0;
+                        width:125px;
+                        h5 {
+                            font-size:17px;
+                        }
+                        img {
+                            height:57px;
+                            width:74px;
+                        }
+                    }
+                    .graphic {
+                        background:$black;
+                        height:125px;
+                        margin-left:25px;
+                        width:125px;
+                        h5 {
+                            font-size:17px;
+                        }
+                        img {
+                            height:57px;
+                            width:57px;
+                        }
+                    }
+                }
+            }
+            .right_about {
+                .info {
+                    margin-right:0;
+                    h1 {
+                        text-align:center;
+                    }
+                    .help {
+                        right:0;
+                        text-align:center;
+                    }
+                    .modern {
+                        text-align:center;
+                    }
+                    p {
+                        margin-right:0;
+                        text-align:center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width:476px) and (max-width:1199px) {
+    .about_section {
+        margin-top:150px;
+        .content_area {
+            .left_about {
+                display:flex;
+                justify-content:center;
+                margin-top:75px;
+                .skills {
+                    .design {
+                        background:$black;
+                        margin-left:0;
+                    }
+                    .graphic {
+                        background:$black;
+                    }
+                }
+            }
+            .right_about {
+                .info {
+                    margin-right:0;
+                    h1 {
+                        text-align:center;
+                    }
+                    .help {
+                        right:0;
+                        text-align:center;
+                    }
+                    .modern {
+                        text-align:center;
+                    }
+                    p {
+                        margin-right:0;
+                        text-align:center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width:1199px) {
+    .about_section {
+        .content_area {
+            .left_about {
+                .man {
+                    margin-left:0;
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width:1200px) and (max-width:1325px) {
+    .about_section {
+        .content_area {
+            .left_about {
+                .skills {
+                    .design {
+                        height:170px;
+                        width:170px;
+                    }
+                    .graphic {
+                        height:170px;
+                        width:170px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width:1325px) {
+    .about_section {
+        .content_area {
+            .left_about {
+                .skills {
+                    display:none !important;
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width:1601px) and (max-width:2000px) {
+    .about_section {
+        @include h5_2000;
+        margin-top:156px;
+        .content_area {
+            .left_about {
+                .man {
+                    margin-left:187px;
+                    img {
+                        height:auto;
+                        width:170px;
+                    }
+                }
+                .skills {
+                    margin-left:62px;
+                    .design {
+                        h5 {
+                            @include h5_2000;
+                            margin-top:12.5px;
+                            text-align:center;
+                        }
+                        img {
+                            height:93px;
+                            width:122px;
+                        }
+                    }
+                    .graphic {
+                        margin-left:31px;
+                        h5 {
+                            @include h5_2000;
+                            margin-top:12.5px;
+                        }
+                        img {
+                            height:93px;
+                            width:93px;
+                        }
+                    }
+                }
+            }
+            .right_about {
+                .info {
+                    margin-right:187px;
+                    h1 {
+                        @include h1_2000;
+                    }
+                    .help {
+                        @include h5_2000;
+                        margin-top:12.5px;
+                    }
+                    .modern {
+                        @include h5_2000;
+                        margin-top:18px;
+                    }
+                    p {
+                        font-size:20px;
+                        margin-top:12.5px;
+                        width:312px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width:2001px) and (max-width:2500px) {
+    .about_section {
+        @include h5_2500;
+        margin-top:195px;
+        .content_area {
+            .left_about {
+                .man {
+                    margin-left:234px;
+                    img {
+                        height:auto;
+                        width:212px;
+                    }
+                }
+                .skills {
+                    margin-left:77px;
+                    .design {
+                        h5 {
+                            @include h5_2500;
+                            margin-top:15.6px;
+                            text-align:center;
+                        }
+                        img {
+                            height:116px;
+                            width:152px;
+                        }
+                    }
+                    .graphic {
+                        margin-left:38px;
+                        h5 {
+                            @include h5_2500;
+                            margin-top:15.6px;
+                        }
+                        img {
+                            height:116px;
+                            width:116px;
+                        }
+                    }
+                }
+            }
+            .right_about {
+                .info {
+                    margin-right:234px;
+                    h1 {
+                        @include h1_2500;
+                    }
+                    .help {
+                        @include h5_2500;
+                        margin-top:15.6px;
+                    }
+                    .modern {
+                        @include h5_2500;
+                        margin-top:22px;
+                    }
+                    p {
+                        font-size:25px;
+                        margin-top:15.6px;
+                        width:390px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width:2501px) and (max-width:3125px) {
+    .about_section {
+        @include h5_3125;
+        margin-top:244px;
+        .content_area {
+            .left_about {
+                .man {
+                    margin-left:293px;
+                    img {
+                        height:auto;
+                        width:265px;
+                    }
+                }
+                .skills {
+                    margin-left:96px;
+                    .design {
+                        h5 {
+                            @include h5_3125;
+                            margin-top:19.5px;
+                            text-align:center;
+                        }
+                        img {
+                            height:145px;
+                            width:190px;
+                        }
+                    }
+                    .graphic {
+                        margin-left:47px;
+                        h5 {
+                            @include h5_3125;
+                            margin-top:19.5px;
+                        }
+                        img {
+                            height:145px;
+                            width:145px;
+                        }
+                    }
+                }
+            }
+            .right_about {
+                .info {
+                    margin-right:292px;
+                    h1 {
+                        @include h1_3125;
+                    }
+                    .help {
+                        @include h5_3125;
+                        margin-top:19.5px;
+                    }
+                    .modern {
+                        @include h5_3125;
+                        margin-top:27px;
+                    }
+                    p {
+                        font-size:31px;
+                        margin-top:19.5px;
+                        width:488px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width:3126px) {
+    .about_section {
+        @include h5_3850;
+        margin-top:305px;
+        .content_area {
+            .left_about {
+                .man {
+                    margin-left:366px;
+                    img {
+                        height:auto;
+                        width:331px;
+                    }
+                }
+                .skills {
+                    margin-left:120px;
+                    .design {
+                        h5 {
+                            @include h5_3850;
+                            margin-top:24.3px;
+                            text-align:center;
+                        }
+                        img {
+                            height:181px;
+                            width:237px;
+                        }
+                    }
+                    .graphic {
+                        margin-left:58px;
+                        h5 {
+                            @include h5_3850;
+                            margin-top:24.3px;
+                        }
+                        img {
+                            height:181px;
+                            width:181px;
+                        }
+                    }
+                }
+            }
+            .right_about {
+                .info {
+                    margin-right:365px;
+                    h1 {
+                        @include h1_3850;
+                    }
+                    .help {
+                        @include h5_3850;
+                        margin-top:24.3px;
+                    }
+                    .modern {
+                        @include h5_3850;
+                        margin-top:33px;
+                    }
+                    p {
+                        font-size:38px;
+                        margin-top:24.3px;
+                        width:610px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,748 @@
+/* 
+
+TABLE OF CONTENTS
+
+1. Section Skills
+ 1.1 Info Area
+ 1.2 Left Side
+2. Work with Different Screen Sizes
+
+*/
+
+
+// Section Skills
+.skills_section {
+    display:none;
+    margin-top:250px;
+    h1 {
+        @include h1;
+        text-align:end;
+    }
+    // Info Area
+    .info {
+        margin-right:150px;
+        p {
+            color:$white;
+            font-family:rajdhani;
+            font-size:16px;
+            margin-top:10px;
+            text-align:end;
+            width:250px;
+        }
+        span {
+            color:$bluegreen;
+        }
+        .web {
+            color:$bluegreen;
+            font-family:jura;
+            margin-top:15px;
+            text-align:end;
+        }
+        .work {
+            color:$white;
+            font-family:jura;
+            margin-top:10px;
+            text-align:end;
+        }
+    }
+    // Left Side
+    .left {
+        .awards {
+            display:inline-block;
+            margin-left:25px;
+            padding-right:25px;
+            h4 {
+                @include h4;
+                color:$bluegreen;
+                font-family:text_me_one;
+                text-align:center;
+            }
+            h5 {
+                @include h5;
+                color:$white;
+                font-family:megrim;
+            }
+        }
+        .bars {
+            margin-left:150px;
+            margin-top:100px;
+            .design {
+                background:$white;
+                height:5px;
+                margin-top:20px;
+                width:400px;
+                .skill {
+                    background:$bluegreen;
+                    height:5px;
+                    width:360px;
+                }
+            }
+            h5 {
+                color:$white;
+                display:inline;
+                font-family:text_me_one;
+                font-weight:bold;
+            }
+            .prototyping {
+                margin-top:75px;
+                .prototype {
+                    background:$white;
+                    height:5px;
+                    margin-top:20px;
+                    width:400px;
+                    .skill {
+                        background:$bluegreen;
+                        height:5px;
+                        width:320px;
+                    }
+                }
+                .skill_80 {
+                    display:inline;
+                    margin-left:180px;
+                }
+            }
+            .skill_90 {
+                display:inline;
+                margin-left:240px;
+            }
+            .wireframing {
+                margin-top:75px;
+                .wireframe {
+                    background:$white;
+                    height:5px;
+                    margin-top:20px;
+                    width:400px;
+                    .skill {
+                        background:$bluegreen;
+                        height:5px;
+                        width:280px;
+                    }
+                }
+                .skill_70 {
+                    display:inline;
+                    margin-left:140px;
+                }
+            }
+        }
+        .clients {
+            border-right:1px solid $white;
+            display:inline-block;
+            margin-left:25px;
+            padding-right:25px;
+            h4 {
+                @include h4;
+                color:$bluegreen;
+                font-family:text_me_one;
+                text-align:center;
+            }
+            h5 {
+                @include h5;
+                color:$white;
+                font-family:megrim;
+            }
+        }
+        .jobs {
+            border-right:1px solid $white;
+            display:inline-block;
+            margin-left:150px;
+            padding-right:25px;
+            h4 {
+                @include h4;
+                color:$bluegreen;
+                font-family:text_me_one;
+                text-align:center;
+            }
+            h5 {
+                @include h5;
+                color:$white;
+                font-family:megrim;
+            }
+        }
+    }
+}
+
+
+// Work with Different Screen Sizes
+@media (max-width:425px) {
+    .skills_section {
+        margin-top:150px;
+        .content_area {
+            margin-top:150px;
+            .info {
+                margin-right:0;
+                h1 {
+                    margin-left:0;
+                    text-align:center;
+                }
+                .web {
+                    text-align:center;
+                }
+                p {
+                    text-align:center;
+                }
+                .work {
+                    text-align:center;
+                }
+            }
+            .left {
+                margin-top:75px;
+                .awards {
+                    padding-right:0;
+                    h4 {
+                        font-size:22px;
+                    }
+                    h5 {
+                        font-size:17px;
+                    }
+                }
+                .bars {
+                    margin-left:0;
+                    .design {
+                        width:275px;
+                        .skill {
+                            width:248px;
+                        }
+                    }
+                    .prototyping {
+                        .prototype {
+                            width:275px;
+                            .skill {
+                                width:220px;
+                            }
+                        }
+                        .skill_80 {
+                            margin-left:80px;
+                        }
+                    }
+                    .skill_90 {
+                        margin-left:125px;
+                    }
+                    .wireframing {
+                        .wireframe {
+                            width:275px;
+                            .skill {
+                                width:193px;
+                            }
+                        }
+                        .skill_70 {
+                            margin-left:53px;
+                        }
+                    }
+                }
+                .clients {
+                    h4 {
+                        font-size:22px;
+                    }
+                    h5 {
+                        font-size:17px;
+                    }
+                }
+                .jobs {
+                    margin-left:0;
+                    padding:0 25px 0 0;
+                    h4 {
+                        font-size:22px;
+                    }
+                    h5 {
+                        font-size:17px;
+                        text-align:center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width:426px) and (max-width:1199px) {
+    .skills_section {
+        margin-top:150px;
+        .content_area {
+            .info {
+                margin-right:0;
+                h1 {
+                    margin-left:0;
+                    text-align:center;
+                }
+                .web {
+                    text-align:center;
+                }
+                p {
+                    text-align:center;
+                }
+                .work {
+                    text-align:center;
+                }
+            }
+            .left {
+                margin-top:75px;
+                .awards {
+                    padding-right:0;
+                }
+                .bars {
+                    margin-left:0;
+                }
+                .jobs {
+                    margin-left:0;
+                    padding:0 25px 0 0;
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width:1601px) and (max-width:2000px) {
+    .skills_section {
+        margin-top:312px;
+        .info {
+            margin-right:187px;
+            h1 {
+                @include h1_2000;
+            }
+            h5 {
+                @include h5_2000;
+            }
+            p {
+                font-size:20px;
+                margin-top:12.5px;
+                width:312px;
+            }
+            .web {
+                margin-top:18px;
+            }
+            .work {
+                margin-top:12.5px;
+            }
+        }
+        .left {
+            .awards {
+                margin-left:31px;
+                padding-right:31px;
+                h4 {
+                    @include h4_2000;
+                }
+                h5 {
+                    @include h5_2000;
+                }
+            }
+            .bars {
+                margin-left:187px;
+                margin-top:125px;
+                .design {
+                    height:6.2px;
+                    margin-top:25px;
+                    width:500px;
+                    .skill {
+                        height:6.2px;
+                        width:450px;
+                    }
+                }
+                h5 {
+                    @include h5_2000;
+                }
+                img {
+                    height:43px;
+                    width:43px;
+                }
+                .prototyping {
+                    margin-top:93px;
+                    .prototype {
+                        height:6.2px;
+                        margin-top:25px;
+                        width:500px;
+                        .skill {
+                            height:6.2px;
+                            width:400px;
+                        }
+                    }
+                    .skill_80 {
+                        margin-left:225px;
+                    }
+                }
+                .skill_90 {
+                    margin-left:300px;
+                }
+                .wireframing {
+                    margin-top:93px;
+                    .wireframe {
+                        height:6.2px;
+                        margin-top:25px;
+                        width:500px;
+                        .skill {
+                            height:6.2px;
+                            width:350px;
+                        }
+                    }
+                    .skill_70 {
+                        margin-left:175px;
+                    }
+                }
+            }
+            .clients {
+                border-right:1.25px solid $white;
+                margin-left:31px;
+                padding-right:31px;
+                h4 {
+                    @include h4_2000;
+                }
+                h5 {
+                    @include h5_2000;
+                }
+            }
+            .jobs {
+                border-right:1.25px solid $white;
+                margin-left:187px;
+                padding-right:31px;
+                h4 {
+                    @include h4_2000;
+                }
+                h5 {
+                    @include h5_2000;
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width:2001px) and (max-width:2500px) {
+    .skills_section {
+        margin-top:390px;
+        .info {
+            margin-right:234px;
+            h1 {
+                @include h1_2500;
+            }
+            h5 {
+                @include h5_2500;
+            }
+            p {
+                font-size:25px;
+                margin-top:15.6px;
+                width:390px;
+            }
+            .web {
+                margin-top:22px;
+            }
+            .work {
+                margin-top:15.6px;
+            }
+        }
+        .left {
+            .awards {
+                margin-left:38px;
+                padding-right:38px;
+                h4 {
+                    @include h4_2500;
+                }
+                h5 {
+                    @include h5_2500;
+                }
+            }
+            .bars {
+                margin-left:233px;
+                margin-top:156px;
+                .design {
+                    height:7.7px;
+                    margin-top:31px;
+                    width:625px;
+                    .skill {
+                        height:7.7px;
+                        width:563px;
+                    }
+                }
+                h5 {
+                    @include h5_2500;
+                }
+                img {
+                    height:53px;
+                    width:53px;
+                }
+                .prototyping {
+                    margin-top:116px;
+                    .prototype {
+                        height:7.7px;
+                        margin-top:31px;
+                        width:625px;
+                        .skill {
+                            height:7.7px;
+                            width:500px;
+                        }
+                    }
+                    .skill_80 {
+                        margin-left:281px;
+                    }
+                }
+                .skill_90 {
+                    margin-left:375px;
+                }
+                .wireframing {
+                    margin-top:116px;
+                    .wireframe {
+                        height:7.7px;
+                        margin-top:31px;
+                        width:625px;
+                        .skill {
+                            height:7.7px;
+                            width:437px;
+                        }
+                    }
+                    .skill_70 {
+                        margin-left:219px;
+                    }
+                }
+            }
+            .clients {
+                border-right:1.56px solid $white;
+                margin-left:38px;
+                padding-right:38px;
+                h4 {
+                    @include h4_2500;
+                }
+                h5 {
+                    @include h5_2500;
+                }
+            }
+            .jobs {
+                border-right:1.56px solid $white;
+                margin-left:233px;
+                padding-right:38px;
+                h4 {
+                    @include h4_2500;
+                }
+                h5 {
+                    @include h5_2500;
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width:2501px) and (max-width:3125px) {
+    .skills_section {
+        margin-top:488px;
+        .info {
+            margin-right:292px;
+            h1 {
+                @include h1_3125;
+            }
+            h5 {
+                @include h5_3125;
+            }
+            p {
+                font-size:31px;
+                margin-top:19.5px;
+                width:488px;
+            }
+            .web {
+                margin-top:27px;
+            }
+            .work {
+                margin-top:19.5px;
+            }
+        }
+        .left {
+            .awards {
+                margin-left:47px;
+                padding-right:47px;
+                h4 {
+                    @include h4_3125;
+                }
+                h5 {
+                    @include h5_3125;
+                }
+            }
+            .bars {
+                margin-left:291px;
+                margin-top:195px;
+                .design {
+                    height:9.6px;
+                    margin-top:38px;
+                    width:781px;
+                    .skill {
+                        height:9.6px;
+                        width:704px;
+                    }
+                }
+                h5 {
+                    @include h5_3125;
+                }
+                img {
+                    height:66px;
+                    width:66px;
+                }
+                .prototyping {
+                    margin-top:145px;
+                    .prototype {
+                        height:9.6px;
+                        margin-top:38px;
+                        width:781px;
+                        .skill {
+                            height:9.6px;
+                            width:625px;
+                        }
+                    }
+                    .skill_80 {
+                        margin-left:351px;
+                    }
+                }
+                .skill_90 {
+                    margin-left:469px;
+                }
+                .wireframing {
+                    margin-top:145px;
+                    .wireframe {
+                        height:9.6px;
+                        margin-top:38px;
+                        width:781px;
+                        .skill {
+                            height:9.6px;
+                            width:546px;
+                        }
+                    }
+                    .skill_70 {
+                        margin-left:273px;
+                    }
+                }
+            }
+            .clients {
+                border-right:1.95px solid $white;
+                margin-left:47px;
+                padding-right:47px;
+                h4 {
+                    @include h4_3125;
+                }
+                h5 {
+                    @include h5_3125;
+                }
+            }
+            .jobs {
+                border-right:1.95px solid $white;
+                margin-left:291px;
+                padding-right:47px;
+                h4 {
+                    @include h4_3125;
+                }
+                h5 {
+                    @include h5_3125;
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width:3126px) {
+    .skills_section {
+        margin-top:610px;
+        .info {
+            margin-right:365px;
+            h1 {
+                @include h1_3850;
+            }
+            h5 {
+                @include h5_3850;
+            }
+            p {
+                font-size:38px;
+                margin-top:24.3px;
+                width:610px;
+            }
+            .web {
+                margin-top:33px;
+            }
+            .work {
+                margin-top:24.3px;
+            }
+        }
+        .left {
+            .awards {
+                margin-left:58px;
+                padding-right:58px;
+                h4 {
+                    @include h4_3850;
+                }
+                h5 {
+                    @include h5_3850;
+                }
+            }
+            .bars {
+                margin-left:363px;
+                margin-top:244px;
+                .design {
+                    height:12px;
+                    margin-top:47px;
+                    width:976px;
+                    .skill {
+                        height:12px;
+                        width:880px;
+                    }
+                }
+                h5 {
+                    @include h5_3850;
+                }
+                img {
+                    height:82px;
+                    width:82px;
+                }
+                .prototyping {
+                    margin-top:181px;
+                    .prototype {
+                        height:12px;
+                        margin-top:47px;
+                        width:976px;
+                        .skill {
+                            height:12px;
+                            width:781px;
+                        }
+                    }
+                    .skill_80 {
+                        margin-left:439px;
+                    }
+                }
+                .skill_90 {
+                    margin-left:586px;
+                }
+                .wireframing {
+                    margin-top:181px;
+                    .wireframe {
+                        height:12px;
+                        margin-top:47px;
+                        width:976px;
+                        .skill {
+                            height:12px;
+                            width:683px;
+                        }
+                    }
+                    .skill_70 {
+                        margin-left:341px;
+                    }
+                }
+            }
+            .clients {
+                border-right:2.43px solid $white;
+                margin-left:58px;
+                padding-right:58px;
+                h4 {
+                    @include h4_3850;
+                }
+                h5 {
+                    @include h5_3850;
+                }
+            }
+            .jobs {
+                border-right:2.43px solid $white;
+                margin-left:363px;
+                padding-right:58px;
+                h4 {
+                    @include h4_3850;
+                }
+                h5 {
+                    @include h5_3850;
+                }
+            }
+        }
+    }
+}

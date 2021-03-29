@@ -1,0 +1,420 @@
+/* 
+
+TABLE OF CONTENTS
+
+1. Section About
+ 1.1 Content
+  1.1.1 Headings
+  1.1.2 Info Area
+  1.1.3 Right Side
+2. Work with Different Screen Sizes
+
+*/
+
+
+// Section Education
+.education_section {
+    display:none;
+    margin-top:250px;
+    // Content 
+    .content_area {
+        // Headings
+        h1 {
+            @include h1;
+        }
+        h3 {
+            @include h3;
+            color:$white;
+            margin-left:15px;
+        }
+        h5 {
+            @include h5;
+            color:$white;
+            font-family:jura;
+            margin-left:15px;
+        }
+        // Info Area
+        .info {
+            margin-left:150px;
+            .quality {
+                color:$bluegreen;
+                font-family:jura;
+                margin-left:0;
+                margin-top:15px;
+            }
+            p {
+                color:$white;
+                font-family:rajdhani;
+                font-size:16px;
+                margin-top:15px;
+                width:250px;
+            }
+            .path {
+                color:$white;
+                margin-left:0;
+                margin-top:10px;
+            }
+            span {
+                color:$bluegreen;
+            }
+        }
+        // Right Side
+        .right {
+            .achievements_bottom {
+                background:$education_dark;
+                height:125px;
+                margin:25px 0 0 0;
+                margin-right:150px;
+                width:350px;
+                .university_certificate {
+                    color:$bluegreen;
+                    font-weight:bold;
+                }
+            }
+            .achievements_middle {
+                background:$education_dark;
+                height:125px;
+                margin:25px 0 25px;
+                margin-right:150px;
+                width:350px;
+                .university_certificate {
+                    color:$bluegreen;
+                    font-weight:bold;
+                }
+            }
+            .achievements_top {
+                background:$education_dark;
+                height:125px;
+                margin:0 0 25px 0;
+                margin-right:150px;
+                width:350px;
+                .university_certificate {
+                    color:$bluegreen;
+                    font-weight:bold;
+                }
+            }
+        }
+    }
+}
+
+
+// Work with Different Screen Sizes
+@media (max-width:375px) {
+    .education_section {
+        margin-top:150px;
+        .content_area {
+            .info {
+                margin-left:0;
+                h1 {
+                    margin-left:0;
+                    text-align:center;
+                }
+                .quality {
+                    text-align:center;
+                }
+                p {
+                    text-align:center;
+                }
+                .path {
+                    text-align:center;
+                }
+            }
+            .right {
+                margin-top:75px;
+                .achievements_bottom {
+                    margin-right:0;
+                    .bottom_area {
+                        width:100%;
+                        h3 {
+                            font-size:25px;
+                            margin-left:0;
+                            text-align:center;
+                        }
+                        h5 {
+                            font-size:17px;
+                            margin-left:0;
+                            text-align:center;
+                        }
+                    }
+                }
+                .achievements_middle {
+                    margin-right:0;
+                    .middle_area {
+                        width:100%;
+                        h3 {
+                            font-size:25px;
+                            margin-left:0;
+                            text-align:center;
+                        }
+                        h5 {
+                            font-size:17px;
+                            margin-left:0;
+                            text-align:center;
+                        }
+                    }
+                }
+                .achievements_top {
+                    margin-right:0;
+                    .top_area {
+                        width:100%;
+                        h3 {
+                            font-size:25px;
+                            margin-left:0;
+                            text-align:center;
+                        }
+                        h5 {
+                            font-size:17px;
+                            margin-left:0;
+                            text-align:center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width:376px) and (max-width:1199px) {
+    .education_section {
+        margin-top:150px;
+        .content_area {
+            .info {
+                margin-left:0;
+                h1 {
+                    margin-left:0;
+                    text-align:center;
+                }
+                .quality {
+                    text-align:center;
+                }
+                p {
+                    text-align:center;
+                }
+                .path {
+                    text-align:center;
+                }
+            }
+            .right {
+                margin-top:75px;
+                .achievements_bottom {
+                    margin-right:0;
+                }
+                .achievements_middle {
+                    margin-right:0;
+                }
+                .achievements_top {
+                    margin-right:0;
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width:1601px) and (max-width:2000px) {
+    .education_section {
+        margin-top:312px;
+        .content_area {
+            h1 {
+                @include h1_2000;
+            }
+            h3 {
+                @include h3_2000;
+            }
+            h5 {
+                @include h5_2000;
+            }
+            .info {
+                margin-left:187px;
+                .quality {
+                    margin-top:18px;
+                }
+                p {
+                    font-size:20px;
+                    margin-top:18px;
+                    width:312px;
+                }
+                .path {
+                    margin-top:15px;
+                }
+            }
+            .right {
+                .achievements_bottom {
+                    height:156px;
+                    margin:31px 0 0 0;
+                    margin-right:187px;
+                    width:438px;
+                }
+                .achievements_middle {
+                    height:156px;
+                    margin:31px 0 31px;
+                    margin-right:187px;
+                    width:438px;
+                }
+                .achievements_top {
+                    height:156px;
+                    margin:0 0 31px 0;
+                    margin-right:187px;
+                    width:438px;
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width:2001px) and (max-width:2500px) {
+    .education_section {
+        margin-top:390px;
+        .content_area {
+            h1 {
+                @include h1_2500;
+            }
+            h3 {
+                @include h3_2500;
+            }
+            h5 {
+                @include h5_2500;
+            }
+            .info {
+                margin-left:234px;
+                .quality {
+                    margin-top:22px;
+                }
+                p {
+                    font-size:25px;
+                    margin-top:22px;
+                    width:390px;
+                }
+                .path {
+                    margin-top:18px;
+                }
+            }
+            .right {
+                .achievements_bottom {
+                    height:195px;
+                    margin:38px 0 0 0;
+                    margin-right:234px;
+                    width:548px;
+                }
+                .achievements_middle {
+                    height:195px;
+                    margin:38px 0 38px;
+                    margin-right:234px;
+                    width:548px;
+                }
+                .achievements_top {
+                    height:195px;
+                    margin:0 0 38px 0;
+                    margin-right:234px;
+                    width:548px;
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width:2501px) and (max-width:3125px) {
+    .education_section {
+        margin-top:488px;
+        .content_area {
+            h1 {
+                @include h1_3125;
+            }
+            h3 {
+                @include h3_3125;
+            }
+            h5 {
+                @include h5_3125;
+            }
+            .info {
+                margin-left:292px;
+                .quality {
+                    margin-top:27px;
+                }
+                p {
+                    font-size:31px;
+                    margin-top:27px;
+                    width:488px;
+                }
+                .path {
+                    margin-top:22px;
+                }
+            }
+            .right {
+                .achievements_bottom {
+                    height:244px;
+                    margin:47px 0 0 0;
+                    margin-right:293px;
+                    width:685px;
+                }
+                .achievements_middle {
+                    height:244px;
+                    margin:47px 0 47px;
+                    margin-right:293px;
+                    width:685px;
+                }
+                .achievements_top {
+                    height:244px;
+                    margin:0 0 47px 0;
+                    margin-right:293px;
+                    width:685px;
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width:3126px) {
+    .education_section {
+        margin-top:610px;
+        .content_area {
+            h1 {
+                @include h1_3850;
+            }
+            h3 {
+                @include h3_3850;
+            }
+            h5 {
+                @include h5_3850;
+            }
+            .info {
+                margin-left:365px;
+                .quality {
+                    margin-top:33px;
+                }
+                p {
+                    font-size:38px;
+                    margin-top:33px;
+                    width:610px;
+                }
+                .path {
+                    margin-top:27px;
+                }
+            }
+            .right {
+                .achievements_bottom {
+                    height:305px;
+                    margin:58px 0 0 0;
+                    margin-right:366px;
+                    width:856px;
+                }
+                .achievements_middle {
+                    height:305px;
+                    margin:58px 0 58px;
+                    margin-right:366px;
+                    width:856px;
+                }
+                .achievements_top {
+                    height:305px;
+                    margin:0 0 58px 0;
+                    margin-right:366px;
+                    width:856px;
+                }
+            }
+        }
+    }
+}

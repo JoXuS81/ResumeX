@@ -1,0 +1,5339 @@
+/* 
+
+TABLE OF CONTENTS
+
+1. Fonts
+ 1.1 Big Shoulders Stencil Display
+ 1.2 Blinker
+ 1.3 Gugi
+2. Mixins
+3. Variables
+4. Body 
+ 4.1 Content 
+  4.1.1 Section Blog 
+  4.1.2 Section Contact 
+  4.1.3 Section Earphones
+  4.1.4 Section Footer
+  4.1.5 Section React
+  4.1.6 Section Tools
+  4.1.7 Section UX/UI
+  4.1.8 Section Works
+  4.1.9 Work with Different Screen Sizes
+
+*/
+
+
+//Fonts
+// Big Shoulders Stencil Display
+@font-face {
+    font-family:bssd;
+    src:url("../Fonts/Big Shoulders Stencil Display/BigShouldersStencilDisplay-Regular.ttf");
+}
+@font-face {
+    font-family:bssd_bold;
+    src:url("../Fonts/Big Shoulders Stencil Display/BigShouldersStencilDisplay-Bold.ttf");
+}
+
+// Blinker
+@font-face {
+    font-family:blinker;
+    src:url("../Fonts/Blinker/Blinker-Regular.ttf");
+}
+@font-face {
+    font-family:blinker_bold;
+    src:url("../Fonts/Blinker/Blinker-Bold.ttf");
+}
+
+// Gugi
+@font-face {
+    font-family:gugi;
+    src:url("../Fonts/Gugi/Gugi-Regular.ttf");
+}
+
+
+// Mixins
+@mixin h1 {
+    color:$white;
+    font-family:gugi;
+    font-size:40px;
+    margin:0;
+    padding:0;
+}
+@mixin h2 {
+    color:$white;
+    font-family:blinker;
+    font-size:36px;
+    margin:0;
+}
+@mixin h3 {
+    color:$white;
+    font-family:blinker;
+    font-size:28px;
+}
+@mixin h4 {
+    color:$white;
+    font-size:25px;
+}
+@mixin h5 {
+    font-size:20px;
+}
+
+@mixin h1_2000 {
+    font-size:50px;
+}
+@mixin h1_2500 {
+    font-size:62px;
+}
+@mixin h1_3125 {
+    font-size:77px;
+}
+@mixin h1_3850 {
+    font-size:96px;
+}
+@mixin h2_2000 {
+    font-size:45px;
+}
+@mixin h2_2500 {
+    font-size:56px;
+}
+@mixin h2_3125 {
+    font-size:70px;
+}
+@mixin h2_3850 {
+    font-size:87px;
+}
+@mixin h3_2000 {
+    font-size:35px;
+}
+@mixin h3_2500 {
+    font-size:43px;
+}
+@mixin h3_3125 {
+    font-size:53px;
+}
+@mixin h3_3850 {
+    font-size:66px;
+}
+@mixin h4_2000 {
+    font-size:31px;
+}
+@mixin h4_2500 {
+    font-size:38px;
+}
+@mixin h4_3125 {
+    font-size:47px;
+}
+@mixin h4_3850 {
+    font-size:58px;
+}
+@mixin h5_2000 {
+    font-size:25px;
+}
+@mixin h5_2500 {
+    font-size:31px;
+}
+@mixin h5_3125 {
+    font-size:38px;
+}
+@mixin h5_3850 {
+    font-size:47px;
+}
+
+
+// Variables
+$black:#000000;
+$blog_dark:#272828;
+$bluegreen:#4fcab0;
+$bluegreen_2:#67ceb3;
+$bluegreen_3:#79d3b9;
+$bluegreendark:#45685e;
+$bluegreenlight:#8bd8c0;
+$bluegreenlight2:#a4e0cc;
+$bluegreenlight3:#c1eadb;
+$bluegreentight:#42a58d;
+$contact:#0c0c0c;
+$dark:#333030;
+$education_dark:#232626;
+$grey:#e1dbdb;
+$greylight:#dbd7d7;
+$greylighter:#efefef;
+$hamburger_background:rgba(0,0,0,0.6);
+$light:#ccc;
+$white:#ffffff;
+
+
+/* Body */
+body {
+    @import "loader";
+    background:$hamburger_background;
+    height:100%;
+    overflow-x:hidden;
+    // Content
+    .content {
+        @import "about";
+        @import "education";
+        @import "home";
+        @import "skills";
+        background:url("../Images/Body/Background.png");
+        background-position:center;
+        background-repeat:no-repeat;
+        background-size:cover;
+        border:0px solid transparent;
+        border-bottom-left-radius:10px;
+        border-bottom-right-radius:10px;
+        border-top-left-radius:10px;
+        border-top-right-radius:10px;
+        margin:0 50px 0 50px;
+        -moz-background-size:cover;
+        -o-background-size:cover;
+        -webkit-background-size:cover;
+        .back {
+            align-items:center;
+            display:flex;
+            height:100vh;
+            left:0;
+            position:fixed;
+            z-index:1;
+        }
+        // Section Blog
+        .blog_section {
+            @include h1;
+            @include h5;
+            display:none;
+            font-family:blinker;
+            margin-top:250px;
+            .content_area {
+                .earphones {
+                    margin:85px 0 0 0;
+                    .blog_area {
+                        margin:0 100px 0 150px;
+                        .info {
+                            position:relative;
+                            img {
+                                border-top-left-radius:10px;
+                                border-top-right-radius:10px;
+                            }
+                            .info_area {
+                                background:$blog_dark;
+                                border-bottom-left-radius:10px;
+                                border-bottom-right-radius:10px;
+                                .author {
+                                    color:$white;
+                                    margin:10px 25px 0 0;
+                                }
+                                .button {
+                                    background:$black;
+                                    border-radius:10px;
+                                    cursor:pointer;
+                                    display:inline-block;
+                                    margin:65px 0 20px 25px;
+                                    padding:15px 45px 15px 45px;
+                                    a {
+                                        color:$bluegreen;
+                                        font-size:16px;
+                                        margin-left:10px;
+                                        text-decoration:none;
+                                    }
+                                }
+                                h5 {
+                                    color:$white;
+                                    margin:10px 0 0 25px;
+                                }
+                            }
+                            .small_info {
+                                background:$black;
+                                border-radius:10px;
+                                height:50px;
+                                position:absolute;
+                                right:-62px;
+                                top:25px;
+                                width:125px;
+                                .text {
+                                    color:$bluegreen;
+                                    margin:0;
+                                    padding:0;
+                                }
+                            }
+                        }
+                    }
+                }
+                .heading {
+                    h1 {
+                        @include h1;
+                        margin:0 150px 0 0;
+                    }
+                }
+                .left_blog {
+                    margin:55px 0 0 0;
+                    .blog_area {
+                        margin:0 100px 0 150px;
+                        .info {
+                            position:relative;
+                            img {
+                                border-top-left-radius:10px;
+                                border-top-right-radius:10px;
+                            }
+                            .info_area {
+                                background:$blog_dark;
+                                border-bottom-left-radius:10px;
+                                border-bottom-right-radius:10px;
+                                .author {
+                                    color:$white;
+                                    margin:10px 25px 0 0;
+                                }
+                                .button {
+                                    background:$black;
+                                    border-radius:10px;
+                                    cursor:pointer;
+                                    display:inline-block;
+                                    margin:65px 0 20px 25px;
+                                    padding:15px 45px 15px 45px;
+                                    a {
+                                        color:$bluegreen;
+                                        font-size:16px;
+                                        margin-left:5px;
+                                        text-decoration:none;
+                                    }
+                                }
+                                h5 {
+                                    color:$white;
+                                    margin:10px 0 0 25px;
+                                }
+                            }
+                            .small_info {
+                                background:$black;
+                                border-radius:10px;
+                                height:50px;
+                                position:absolute;
+                                right:-62px;
+                                top:25px;
+                                width:125px;
+                                .text {
+                                    color:$bluegreen;
+                                    margin:0;
+                                    padding:0;
+                                }
+                            }
+                        }
+                    }
+                }
+                .right_blog {
+                    margin:55px 0 0 0;
+                    .blog_area {
+                        margin:0 150px 0 100px;
+                        .info {
+                            position:relative;
+                            img {
+                                border-top-left-radius:10px;
+                                border-top-right-radius:10px;
+                            }
+                            .info_area {
+                                background:$blog_dark;
+                                border-bottom-left-radius:10px;
+                                border-bottom-right-radius:10px;
+                                .author {
+                                    color:$white;
+                                    margin:10px 25px 0 0;
+                                }
+                                .button {
+                                    background:$black;
+                                    border-radius:10px;
+                                    cursor:pointer;
+                                    display:inline-block;
+                                    margin:65px 0 20px 25px;
+                                    padding:15px 45px 15px 45px;
+                                    a {
+                                        color:$bluegreen;
+                                        font-size:16px;
+                                        margin-left:5px;
+                                        text-decoration:none;
+                                    }
+                                }
+                                h5 {
+                                    color:$white;
+                                    margin:10px 0 0 25px;
+                                }
+                            }
+                            .small_info {
+                                background:$black;
+                                border-radius:10px;
+                                height:50px;
+                                left:-62px;
+                                position:absolute;
+                                top:25px;
+                                width:125px;
+                                .text {
+                                    color:$bluegreen;
+                                    margin:0;
+                                    padding:0;
+                                }
+                            }
+                        }
+                    }
+                }
+                .ux {
+                    margin:85px 0 0 0;
+                    .blog_area {
+                        margin:0 150px 0 100px;
+                        .info {
+                            position:relative;
+                            img {
+                                border-top-left-radius:10px;
+                                border-top-right-radius:10px;
+                            }
+                            .info_area {
+                                background:$blog_dark;
+                                border-bottom-left-radius:10px;
+                                border-bottom-right-radius:10px;
+                                .author {
+                                    color:$white;
+                                    margin:10px 25px 0 0;
+                                }
+                                .button {
+                                    background:$black;
+                                    border-radius:10px;
+                                    cursor:pointer;
+                                    display:inline-block;
+                                    margin:65px 0 20px 25px;
+                                    padding:15px 45px 15px 45px;
+                                    a {
+                                        color:$bluegreen;
+                                        font-size:16px;
+                                        margin-left:5px;
+                                        text-decoration:none;
+                                    }
+                                }
+                                h5 {
+                                    color:$white;
+                                    margin:10px 0 0 25px;
+                                }
+                            }
+                            .small_info {
+                                background:$black;
+                                border-radius:10px;
+                                height:50px;
+                                left:-62px;
+                                position:absolute;
+                                top:25px;
+                                width:125px;
+                                .text {
+                                    color:$bluegreen;
+                                    margin:0;
+                                    padding:0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            h4 {
+                @include h4;
+                color:$white;
+                padding:20px 0 0 25px;
+            }
+        }
+
+
+        // Section Contact
+        .contact_section {
+            display:none;
+            font-family:blinker;
+            margin-top:250px;
+            .content_area {
+                margin:55px 150px 0 150px;
+                .left_area {
+                    background:$black;
+                    border-bottom-left-radius:10px;
+                    border-top-left-radius:10px;
+                    width:40%;
+                    .info_block {
+                        height:100%;
+                        .mail {
+                            margin-top:0;
+                        }
+                        p {
+                            color:$white;
+                            margin:0 0 0 25px;
+                        }
+                        .social_icons {
+                            .social {
+                                margin:50px 0 0 15px;
+                                a {
+                                    margin:10px;
+                                    text-decoration:none;
+                                }
+                            }
+                        }
+                    }
+                    .resume {
+                        color:$white;
+                        font-family:bssd;
+                        margin:25px 0 100px 25px;
+                    }
+                }
+                .right_area {
+                    background:$hamburger_background;
+                    border-bottom-right-radius:10px;
+                    border-top-right-radius:10px;
+                    width:60%;
+                    .address {
+                        color:$white;
+                        margin-left:0;
+                        margin-top:10px;
+                        text-align:center;
+                    }
+                    .icon {
+                        margin:75px 0 0 0;
+                    }
+                    .japan {
+                        margin-bottom:25px;
+                    }
+                    .location {
+                        margin-left:0;
+                        margin-top:10px;
+                        text-align:center;
+                    }
+                    .offices {
+                        margin:25px 25px 0 0;
+                    }
+                    .top {
+                        margin-top:25px;
+                    }
+                }
+            }
+            h1 {
+                @include h1;
+            }
+            h4 {
+                @include h4;
+                color:$white;
+                margin:25px 0 0 25px;
+            }
+            h5 {
+                @include h5;
+                color:$white;
+                margin:50px 0 0 25px;
+            }
+            .heading_container {
+                .heading {
+                    margin-left:150px;
+                }
+            }
+        }
+
+
+        // Section Earphones
+        .earphones_section {
+            background:url("../Images/Body/Blog_Background.png");
+            background-position:center;
+            background-repeat:no-repeat;
+            background-size:cover;
+            border:0px solid transparent;
+            border-bottom-left-radius:10px;
+            border-bottom-right-radius:10px;
+            border-top-left-radius:10px;
+            border-top-right-radius:10px;
+            font-family:blinker;
+            margin:50px 0 50px 0;
+            -moz-background-size:cover;
+            -o-background-size:cover;
+            -webkit-background-size:cover;
+            .author {
+                border:none;
+                display:inline-block;
+                margin:15px 0 0 10px;
+            }
+            h2 {
+                @include h2;
+                padding:50px 0 0 150px;
+            }
+            h3 {
+                @include h3;
+                margin:25px 0 0 150px;
+            }
+            h4 {
+                @include h4;
+                color:$white;
+                margin:0;
+                margin-bottom:15px;
+                padding:0;
+            }
+            img {
+                display:block;
+                margin:25px 0 0 150px;
+            }
+            .info {
+                display:inline-block;
+                margin:15px 0 0 10px;
+            }
+            p {
+                border-right:2px solid $white;
+                color:$white;
+                display:inline-block;
+                margin:15px 0 0 150px;
+                padding:0 10px 0 0;
+            }
+            .right_zone {
+                .category_instagram {
+                    display:inline-block;
+                    margin:150px 145px 0 0;
+                    padding:0;
+                    .category {
+                        margin-left:5px;
+                        a {
+                            color:$white;
+                            display:block;
+                            margin:0;
+                            margin-bottom:10px;
+                            padding:0;
+                            text-decoration:none;
+                        }
+                    }
+                    .instagram_area {
+                        .instagram {
+                            margin:100px 0 0 0;
+                            .instagram_heading {
+                                margin-left:5px;
+                            }
+                            .instagram_images {
+                                margin-top:20px;
+                                width:340px;
+                                .instagram_img {
+                                    margin:5px;
+                                    padding:0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .social_tags {
+                display:inline-block;
+                margin:25px 0 50px 150px;
+                width:100%;
+                .social_container {
+                    display:inline;
+                    .social_area {
+                        display:inline;
+                        margin:0;
+                        padding:0;
+                        a {
+                            display:inline;
+                            margin:0 10px 0 0;
+                            padding:0;
+                            text-decoration:none;
+                            .icon {
+                                display:inline;
+                                margin:0;
+                                padding:0;
+                            } 
+                        }
+                    }
+                }
+                .tags_container {
+                    display:inline;
+                    .tags_area {
+                        display:inline;
+                        margin-left:20px;
+                        .tag {
+                            border:1px solid $white;
+                            margin:0;
+                            margin-right:2px;
+                            padding:5px 10px 5px 10px;
+                        }
+                    }
+                }
+            }
+            .text {
+                border:none;
+                margin:10px 0 0 150px;
+                width:750px;
+            }
+        }
+
+
+        // Section Footer
+        footer {
+            border:0px solid transparent;
+            border-bottom-left-radius:10px;
+            border-bottom-right-radius:10px;
+            display:none;
+            font-family:blinker;
+            margin:0;
+            margin-bottom:50px;
+            margin-top:250px;
+            a {
+                margin:5px;
+                padding:0;
+                text-decoration:none;
+            }
+            h4 {
+                @include h4;
+                font-family:bssd;
+                margin-bottom:13px;
+                text-align:center;
+            }
+            h5 {
+                @include h5;
+                color:$white;
+                font-family:bssd;
+                margin-top:10px;
+                padding-bottom:50px;
+                text-align:center;
+            }
+        }
+
+
+        // Section React
+        .react {
+            background:url("../Images/Body/Blog_Background.png");
+            background-position:center;
+            background-repeat:no-repeat;
+            background-size:cover;
+            border:0px solid transparent;
+            border-bottom-left-radius:10px;
+            border-bottom-right-radius:10px;
+            border-top-left-radius:10px;
+            border-top-right-radius:10px;
+            font-family:blinker;
+            margin:50px 0 50px 0;
+            -moz-background-size:cover;
+            -o-background-size:cover;
+            -webkit-background-size:cover;
+            .author {
+                border:none;
+                display:inline-block;
+                margin:15px 0 0 10px;
+            }
+            h2 {
+                @include h2;
+                padding:50px 0 0 150px;
+            }
+            h3 {
+                @include h3;
+                margin:25px 0 0 150px;
+            }
+            h4 {
+                @include h4;
+                color:$white;
+                margin:0;
+                margin-bottom:15px;
+                padding:0;
+            }
+            img {
+                display:block;
+                margin:25px 0 0 150px;
+            }
+            .info {
+                display:inline-block;
+                margin:15px 0 0 10px;
+            }
+            p {
+                border-right:2px solid $white;
+                color:$white;
+                display:inline-block;
+                margin:15px 0 0 150px;
+                padding:0 10px 0 0;
+            }
+            .right_zone {
+                .category_instagram {
+                    display:inline-block;
+                    margin:150px 145px 0 0;
+                    padding:0;
+                    .category {
+                        margin-left:5px;
+                        a {
+                            color:$white;
+                            display:block;
+                            margin:0;
+                            margin-bottom:10px;
+                            padding:0;
+                            text-decoration:none;
+                        }
+                    }
+                    .instagram_area {
+                        .instagram {
+                            margin:100px 0 0 0;
+                            .instagram_heading {
+                                margin-left:5px;
+                            }
+                            .instagram_images {
+                                margin-top:20px;
+                                width:340px;
+                                .instagram_img {
+                                    margin:5px;
+                                    padding:0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .social_tags {
+                display:inline-block;
+                margin:25px 0 50px 150px;
+                width:100%;
+                .social_container {
+                    display:inline;
+                    .social_area {
+                        display:inline;
+                        margin:0;
+                        padding:0;
+                        a {
+                            display:inline;
+                            margin:0 10px 0 0;
+                            padding:0;
+                            text-decoration:none;
+                            .icon {
+                                display:inline;
+                                margin:0;
+                                padding:0;
+                            } 
+                        }
+                    }
+                }
+                .tags_container {
+                    display:inline;
+                    .tags_area {
+                        display:inline;
+                        margin-left:20px;
+                        .tag {
+                            border:1px solid $white;
+                            margin:0;
+                            margin-right:2px;
+                            padding:5px 10px 5px 10px;
+                        }
+                    }
+                }
+            }
+            .text {
+                border:none;
+                margin:10px 0 0 150px;
+                width:750px;
+            }
+        }
+
+
+        // Section Tools
+        .tools {
+            background:url("../Images/Body/Blog_Background.png");
+            background-position:center;
+            background-repeat:no-repeat;
+            background-size:cover;
+            border:0px solid transparent;
+            border-bottom-left-radius:10px;
+            border-bottom-right-radius:10px;
+            border-top-left-radius:10px;
+            border-top-right-radius:10px;
+            font-family:blinker;
+            margin:50px 0 50px 0;
+            -moz-background-size:cover;
+            -o-background-size:cover;
+            -webkit-background-size:cover;
+            .author {
+                border:none;
+                display:inline-block;
+                margin:15px 0 0 10px;
+            }
+            h2 {
+                @include h2;
+                padding:50px 0 0 150px;
+            }
+            h3 {
+                @include h3;
+                margin:25px 0 0 150px;
+            }
+            h4 {
+                @include h4;
+                color:$white;
+                margin:0;
+                margin-bottom:15px;
+                padding:0;
+            }
+            img {
+                display:block;
+                margin:25px 0 0 150px;
+            }
+            .info {
+                display:inline-block;
+                margin:15px 0 0 10px;
+            }
+            p {
+                border-right:2px solid $white;
+                color:$white;
+                display:inline-block;
+                margin:15px 0 0 150px;
+                padding:0 10px 0 0;
+            }
+            .right_zone {
+                .category_instagram {
+                    display:inline-block;
+                    margin:150px 145px 0 0;
+                    padding:0;
+                    .category {
+                        margin-left:5px;
+                        a {
+                            color:$white;
+                            display:block;
+                            margin:0;
+                            margin-bottom:10px;
+                            padding:0;
+                            text-decoration:none;
+                        }
+                    }
+                    .instagram_area {
+                        .instagram {
+                            margin:100px 0 0 0;
+                            .instagram_heading {
+                                margin-left:5px;
+                            }
+                            .instagram_images {
+                                margin-top:20px;
+                                width:340px;
+                                .instagram_img {
+                                    margin:5px;
+                                    padding:0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .social_tags {
+                display:inline-block;
+                margin:25px 0 50px 150px;
+                width:100%;
+                .social_container {
+                    display:inline;
+                    .social_area {
+                        display:inline;
+                        margin:0;
+                        padding:0;
+                        a {
+                            display:inline;
+                            margin:0 10px 0 0;
+                            padding:0;
+                            text-decoration:none;
+                            .icon {
+                                display:inline;
+                                margin:0;
+                                padding:0;
+                            } 
+                        }
+                    }
+                }
+                .tags_container {
+                    display:inline;
+                    .tags_area {
+                        display:inline;
+                        margin-left:20px;
+                        .tag {
+                            border:1px solid $white;
+                            margin:0;
+                            margin-right:2px;
+                            padding:5px 10px 5px 10px;
+                        }
+                    }
+                }
+            }
+            .text {
+                border:none;
+                margin:10px 0 0 150px;
+                width:750px;
+            }
+        }
+
+
+        // Section UX/UI
+        .uxui_section {
+            background:url("../Images/Body/Blog_Background.png");
+            background-position:center;
+            background-repeat:no-repeat;
+            background-size:cover;
+            border:0px solid transparent;
+            border-bottom-left-radius:10px;
+            border-bottom-right-radius:10px;
+            border-top-left-radius:10px;
+            border-top-right-radius:10px;
+            font-family:blinker;
+            margin:50px 0 50px 0;
+            -moz-background-size:cover;
+            -o-background-size:cover;
+            -webkit-background-size:cover;
+            .author {
+                border:none;
+                display:inline-block;
+                margin:15px 0 0 10px;
+            }
+            h2 {
+                @include h2;
+                padding:50px 0 0 150px;
+            }
+            h3 {
+                @include h3;
+                margin:25px 0 0 150px;
+            }
+            h4 {
+                @include h4;
+                color:$white;
+                margin:0;
+                margin-bottom:15px;
+                padding:0;
+            }
+            img {
+                display:block;
+                margin:25px 0 0 150px;
+            }
+            .info {
+                display:inline-block;
+                margin:15px 0 0 10px;
+            }
+            p {
+                border-right:2px solid $white;
+                color:$white;
+                display:inline-block;
+                margin:15px 0 0 150px;
+                padding:0 10px 0 0;
+            }
+            .right_zone {
+                .category_instagram {
+                    display:inline-block;
+                    margin:150px 145px 0 0;
+                    padding:0;
+                    .category {
+                        margin-left:5px;
+                        a {
+                            color:$white;
+                            display:block;
+                            margin:0;
+                            margin-bottom:10px;
+                            padding:0;
+                            text-decoration:none;
+                        }
+                    }
+                    .instagram_area {
+                        .instagram {
+                            margin:100px 0 0 0;
+                            .instagram_heading {
+                                margin-left:5px;
+                            }
+                            .instagram_images {
+                                margin-top:20px;
+                                width:340px;
+                                .instagram_img {
+                                    margin:5px;
+                                    padding:0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .social_tags {
+                display:inline-block;
+                margin:25px 0 50px 150px;
+                width:100%;
+                .social_container {
+                    display:inline;
+                    .social_area {
+                        display:inline;
+                        margin:0;
+                        padding:0;
+                        a {
+                            display:inline;
+                            margin:0 10px 0 0;
+                            padding:0;
+                            text-decoration:none;
+                            .icon {
+                                display:inline;
+                                margin:0;
+                                padding:0;
+                            } 
+                        }
+                    }
+                }
+                .tags_container {
+                    display:inline;
+                    .tags_area {
+                        display:inline;
+                        margin-left:20px;
+                        .tag {
+                            border:1px solid $white;
+                            margin:0;
+                            margin-right:2px;
+                            padding:5px 10px 5px 10px;
+                        }
+                    }
+                }
+            }
+            .text {
+                border:none;
+                margin:10px 0 0 150px;
+                width:750px;
+            }
+        }
+
+
+        // Section Works
+        .works_section {
+            display:none;
+            font-family:blinker;
+            margin-top:250px;
+            h1 {
+                @include h1;
+                margin-left:150px;
+            }
+            .images {
+                margin-top:25px;
+                .block {
+                    margin-left:125px;
+                    margin-right:125px;
+                    .left {
+                        margin:0;
+                        padding:0;
+                        .img_area {
+                            margin:25px;
+                            padding:0;
+                            img {
+                                border-radius:10px;
+                                margin:0;
+                                padding:0;
+                                &:hover {
+                                    transform:scale(1.05);
+                                }
+                            }
+                        }
+                    }
+                    .right {
+                        margin:0;
+                        padding:0;
+                        .img_area {
+                            margin:25px;
+                            padding:0;
+                            img {
+                                border-radius:10px;
+                                margin:0;
+                                padding:0;
+                                &:hover {
+                                    transform:scale(1.05);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            ul {
+                height:35px;
+                list-style-type:none;
+                margin-left:135px;
+                margin-top:40px;
+                padding:0;
+                width:1200px;
+                .all {
+                    color:$bluegreen;
+                }
+                .first {
+                    background:transparent;
+                    border:1px solid $bluegreen;
+                    border-radius:5px;
+                }
+                li {
+                    background:$bluegreen;
+                    border:1px solid transparent;
+                    border-radius:5px;
+                    color:$white;
+                    margin:0 15px 0 15px;
+                    width:125px;
+                    &:hover {
+                        cursor:pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+html {
+    overflow-x:hidden;
+}
+
+
+// Work with Different Screen Sizes
+@media (min-height:901px) and (max-height:1024px) {
+    body {
+        .content {
+            .earphones_section {
+                h2 {
+                    padding-top:125px;
+                }
+                .social_tags {
+                    margin-bottom:125px;
+                }
+            }
+            .react {
+                h2 {
+                    padding-top:125px;
+                }
+                .social_tags {
+                    margin-bottom:125px;
+                }
+            }
+            .tools {
+                h2 {
+                    padding-top:125px;
+                }
+                .social_tags {
+                    margin-bottom:125px;
+                }
+            }
+            .uxui_section {
+                h2 {
+                    padding-top:125px;
+                }
+                .social_tags {
+                    margin-bottom:125px;
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width:350px) {
+    body {
+        .content {
+            .blog_section {
+                margin-top:150px;
+                .content_area {
+                    .heading {
+                        h1 {
+                            margin:0;
+                        }
+                    }
+                    .earphones {
+                        margin-left:0;
+                        margin-top:55px;
+                        .blog_area {
+                            margin-left:25px;
+                            margin-right:25px;
+                            .info {
+                                .small_info {
+                                    display:none !important;
+                                }
+                            }
+                        }
+                    }
+                    .left_blog {
+                        margin-left:0;
+                        .blog_area {
+                            margin-left:25px;
+                            margin-right:25px;
+                            .info {
+                                .small_info {
+                                    display:none !important;
+                                }
+                            }
+                        }
+                    }
+                    .right_blog {
+                        margin-left:0;
+                        .blog_area {
+                            margin-left:25px;
+                            margin-right:25px;
+                            .info {
+                                .small_info {
+                                    display:none !important;
+                                }
+                            }
+                        }
+                    }
+                    .ux {
+                        margin-left:0;
+                        margin-top:55px;
+                        .blog_area {
+                            margin-left:25px;
+                            margin-right:25px;
+                            .info {
+                                .small_info {
+                                    display:none !important;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .earphones_section {
+                h2 {
+                    font-size:33px;
+                }
+                p {
+                    font-size:12px;
+                }
+                .right_zone {
+                    .category_instagram {
+                        .instagram_area {
+                            .instagram {
+                                .instagram_images {
+                                    .instagram_img {
+                                        margin:0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .react {
+                h2 {
+                    font-size:33px;
+                }
+                p {
+                    font-size:12px;
+                }
+                .right_zone {
+                    .category_instagram {
+                        .instagram_area {
+                            .instagram {
+                                .instagram_images {
+                                    .instagram_img {
+                                        margin:0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .tools {
+                h2 {
+                    font-size:33px;
+                }
+                p {
+                    font-size:12px;
+                }
+                .right_zone {
+                    .category_instagram {
+                        .instagram_area {
+                            .instagram {
+                                .instagram_images {
+                                    .instagram_img {
+                                        margin:0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .uxui_section {
+                h2 {
+                    font-size:33px;
+                }
+                p {
+                    font-size:12px;
+                }
+                .right_zone {
+                    .category_instagram {
+                        .instagram_area {
+                            .instagram {
+                                .instagram_images {
+                                    .instagram_img {
+                                        margin:0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width:351px) and (max-width:375px) {
+    body {
+        .content {
+            .earphones_section {
+                h2 {
+                    font-size:33px;
+                }
+                p {
+                    font-size:13px;
+                }
+            }
+            .react {
+                h2 {
+                    font-size:33px;
+                }
+                p {
+                    font-size:13px;
+                }
+            }
+            .tools {
+                h2 {
+                    font-size:33px;
+                }
+                p {
+                    font-size:13px;
+                }
+            }
+            .uxui_section {
+                h2 {
+                    font-size:33px;
+                }
+                p {
+                    font-size:13px;
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width:351px) and (max-width:1199px) {
+    body {
+        .content {
+            .blog_section {
+                margin-top:150px;
+                .content_area {
+                    .heading {
+                        h1 {
+                            margin:0;
+                        }
+                    }
+                    .earphones {
+                        margin-left:0;
+                        margin-top:55px;
+                        .blog_area {
+                            margin-left:50px;
+                            margin-right:50px;
+                            .info {
+                                .small_info {
+                                    display:none !important;
+                                }
+                            }
+                        }
+                    }
+                    .left_blog {
+                        margin-left:0;
+                        .blog_area {
+                            margin-left:50px;
+                            margin-right:50px;
+                            .info {
+                                .small_info {
+                                    display:none !important;
+                                }
+                            }
+                        }
+                    }
+                    .right_blog {
+                        margin-left:0;
+                        .blog_area {
+                            margin-left:50px;
+                            margin-right:50px;
+                            .info {
+                                .small_info {
+                                    display:none !important;
+                                }
+                            }
+                        }
+                    }
+                    .ux {
+                        margin-left:0;
+                        margin-top:55px;
+                        .blog_area {
+                            margin-left:50px;
+                            margin-right:50px;
+                            .info {
+                                .small_info {
+                                    display:none !important;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width:375px) {
+    body {                      
+        .content {
+            .earphones_section {
+                .right_zone {
+                    .category_instagram {
+                        .instagram_area {
+                            .instagram {
+                                .instagram_images {
+                                    width:300px;
+                                    .instagram_img {
+                                        margin:0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .react {
+                .right_zone {
+                    .category_instagram {
+                        .instagram_area {
+                            .instagram {
+                                .instagram_images {
+                                    width:300px;
+                                    .instagram_img {
+                                        margin:0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .tools {
+                .right_zone {
+                    .category_instagram {
+                        .instagram_area {
+                            .instagram {
+                                .instagram_images {
+                                    width:300px;
+                                    .instagram_img {
+                                        margin:0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .uxui_section {
+                .right_zone {
+                    .category_instagram {
+                        .instagram_area {
+                            .instagram {
+                                .instagram_images {
+                                    width:300px;
+                                    .instagram_img {
+                                        margin:0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }    
+    }
+}
+
+
+@media (max-width:400px) {
+    body {
+        .content {
+            .works_section {
+                margin-top:150px;
+                h1 {
+                    margin-left:0;
+                    text-align:center;
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width:450px) {
+    body {
+        .content {
+            .blog_section {
+                h4 {
+                    font-size:22px;
+                }
+                h5 {
+                    font-size:14px;
+                }
+            }
+            .contact_section {
+                .content_area {
+                    display:flex;
+                    justify-content:center;
+                    margin-left:0;
+                    margin-right:0;
+                    .left_area {
+                        border-bottom-left-radius:0;
+                        border-bottom-right-radius:0;
+                        border-top-left-radius:10px;
+                        border-top-right-radius:10px;
+                        width:90%;
+                        h5 {
+                            margin-left:0;
+                            text-align:center;
+                        }
+                        .info_block {
+                            display:flex;
+                            justify-content:center;
+                            .mail {
+                                margin-top:50px;
+                            }
+                            p {
+                                margin:0;
+                                text-align:center;
+                            }
+                            .social_icons {
+                                display:flex;
+                                justify-content:center;
+                                .social {
+                                    display:inline-block;
+                                    margin:50px 0 50px 0;
+                                    a {
+                                        margin:5px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .right_area {
+                        border-bottom-left-radius:10px;
+                        border-bottom-right-radius:10px;
+                        border-top-left-radius:0;
+                        border-top-right-radius:0;
+                        width:90%;
+                        .japan {
+                            margin-bottom:50px;
+                        }
+                        .top {
+                            margin-top:50px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width:450px) and (max-width:975px) {
+    body {
+        .content {
+            .contact_section {
+                .content_area {
+                    display:flex;
+                    justify-content:center;
+                    margin-left:0;
+                    margin-right:0;
+                    .left_area {
+                        border-bottom-left-radius:0;
+                        border-bottom-right-radius:0;
+                        border-top-left-radius:10px;
+                        border-top-right-radius:10px;
+                        margin-left:50px;
+                        margin-right:50px;
+                        width:90%;
+                        h5 {
+                            margin-left:0;
+                            text-align:center;
+                        }
+                        .info_block {
+                            display:flex;
+                            justify-content:center;
+                            .mail {
+                                margin-top:50px;
+                            }
+                            p {
+                                margin:0;
+                                text-align:center;
+                            }
+                            .social_icons {
+                                display:flex;
+                                justify-content:center;
+                                .social {
+                                    display:inline-block;
+                                    margin:50px 0 50px 0;
+                                    a {
+                                        margin:5px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .right_area {
+                        border-bottom-left-radius:10px;
+                        border-bottom-right-radius:10px;
+                        border-top-left-radius:0;
+                        border-top-right-radius:0;
+                        margin-left:50px;
+                        margin-right:50px;
+                        width:90%;
+                        .japan {
+                            margin-bottom:50px;
+                        }
+                        .top {
+                            margin-top:50px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width:550px) {
+    body {
+        background:$greylighter;
+        .content {
+            border-radius:0;
+            margin:0;
+            footer {
+                border-radius:0;
+                margin-bottom:0;
+            }
+            .react {
+                margin:0;
+            }
+            .tools {
+                margin:0;
+            }
+        }
+    }
+}
+
+
+@media (max-width:625px) {
+    body {
+        .content {
+            .works_section {
+                .navbar {
+                    display:flex;
+                    justify-content:center;
+                    ul {
+                        margin-left:0;
+                        width:300px;
+                        li {
+                            margin-left:5px;
+                            margin-right:5px;
+                            width:65px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width:626px) and (max-width:1199px) {
+    body {
+        .content {
+            .works_section {
+                .navbar {
+                    display:flex;
+                    justify-content:center;
+                    ul {
+                        margin-left:0;
+                        width:620px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width:800px) {
+    body {
+        .content {
+            .works_section {
+                margin-top:150px;
+            }
+        }
+    }
+}
+
+
+@media (max-width:1199px) {
+    body {
+        .content {
+            .contact_section {
+                margin-top:150px;
+                .heading_container {
+                    display:flex;
+                    justify-content:center;
+                    .heading {
+                        margin-left:0;
+                    } 
+                }
+            }
+            .earphones_section {
+                .author {
+                    padding-right:0;
+                }
+                h2 {
+                    padding-left:0;
+                    text-align:center;
+                }
+                h3 {
+                    margin-left:0;
+                    text-align:center;
+                }
+                img {
+                    margin-left:0;
+                }
+                p {
+                    margin-left:0;
+                    text-align:center;
+                }
+                .right_zone {
+                    .category_instagram {
+                        margin-right:0;
+                        margin-top:75px;
+                        .category {
+                            margin-left:0;
+                            a {
+                                text-align:center;
+                            }
+                        }
+                        .instagram_area {
+                            .instagram {
+                                margin-top:75px;
+                                .instagram_heading {
+                                    margin-left:0;
+                                    text-align:center;
+                                }
+                                .instagram_images {
+                                    margin-bottom:50px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .social_tags {
+                    margin-left:0;
+                    .social_container {
+                        display:flex;
+                        justify-content:center;
+                        position:relative;
+                        top:60px;
+                        .social_area {
+                            display:block;
+                        }
+                    }
+                    .tags_container {
+                        bottom:30px;
+                        display:flex;
+                        justify-content:center;
+                        position:relative;
+                        .tags_area {
+                            display:block;
+                            margin-left:0;
+                        }
+                    }
+                }
+                .text {
+                    margin-left:0;
+                    text-align:center;
+                }
+            }
+            footer {
+                margin-top:150px;
+            }
+            .react {
+                .author {
+                    padding-right:0;
+                }
+                h2 {
+                    padding-left:0;
+                    text-align:center;
+                }
+                h3 {
+                    margin-left:0;
+                    text-align:center;
+                }
+                img {
+                    margin-left:0;
+                }
+                p {
+                    margin-left:0;
+                    text-align:center;
+                }
+                .right_zone {
+                    .category_instagram {
+                        margin-right:0;
+                        margin-top:75px;
+                        .category {
+                            margin-left:0;
+                            a {
+                                text-align:center;
+                            }
+                        }
+                        .instagram_area {
+                            .instagram {
+                                margin-top:75px;
+                                .instagram_heading {
+                                    margin-left:0;
+                                    text-align:center;
+                                }
+                                .instagram_images {
+                                    margin-bottom:50px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .social_tags {
+                    margin-left:0;
+                    .social_container {
+                        display:flex;
+                        justify-content:center;
+                        position:relative;
+                        top:60px;
+                        .social_area {
+                            display:block;
+                        }
+                    }
+                    .tags_container {
+                        bottom:30px;
+                        display:flex;
+                        justify-content:center;
+                        position:relative;
+                        .tags_area {
+                            display:block;
+                            margin-left:0;
+                        }
+                    }
+                }
+                .text {
+                    margin-left:0;
+                    text-align:center;
+                }
+            }
+            .tools {
+                .author {
+                    padding-right:0;
+                }
+                h2 {
+                    padding-left:0;
+                    text-align:center;
+                }
+                h3 {
+                    margin-left:0;
+                    text-align:center;
+                }
+                img {
+                    margin-left:0;
+                }
+                p {
+                    margin-left:0;
+                    text-align:center;
+                }
+                .right_zone {
+                    .category_instagram {
+                        margin-right:0;
+                        margin-top:75px;
+                        .category {
+                            margin-left:0;
+                            a {
+                                text-align:center;
+                            }
+                        }
+                        .instagram_area {
+                            .instagram {
+                                margin-top:75px;
+                                .instagram_heading {
+                                    margin-left:0;
+                                    text-align:center;
+                                }
+                                .instagram_images {
+                                    margin-bottom:50px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .social_tags {
+                    margin-left:0;
+                    .social_container {
+                        display:flex;
+                        justify-content:center;
+                        position:relative;
+                        top:60px;
+                        .social_area {
+                            display:block;
+                        }
+                    }
+                    .tags_container {
+                        bottom:30px;
+                        display:flex;
+                        justify-content:center;
+                        position:relative;
+                        .tags_area {
+                            display:block;
+                            margin-left:0;
+                        }
+                    }
+                }
+                .text {
+                    margin-left:0;
+                    text-align:center;
+                }
+            }
+            .uxui_section {
+                .author {
+                    padding-right:0;
+                }
+                h2 {
+                    padding-left:0;
+                    text-align:center;
+                }
+                h3 {
+                    margin-left:0;
+                    text-align:center;
+                }
+                img {
+                    margin-left:0;
+                }
+                p {
+                    margin-left:0;
+                    text-align:center;
+                }
+                .right_zone {
+                    .category_instagram {
+                        margin-right:0;
+                        margin-top:75px;
+                        .category {
+                            margin-left:0;
+                            a {
+                                text-align:center;
+                            }
+                        }
+                        .instagram_area {
+                            .instagram {
+                                margin-top:75px;
+                                .instagram_heading {
+                                    margin-left:0;
+                                    text-align:center;
+                                }
+                                .instagram_images {
+                                    margin-bottom:50px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .social_tags {
+                    margin-left:0;
+                    .social_container {
+                        display:flex;
+                        justify-content:center;
+                        position:relative;
+                        top:60px;
+                        .social_area {
+                            display:block;
+                        }
+                    }
+                    .tags_container {
+                        bottom:30px;
+                        display:flex;
+                        justify-content:center;
+                        position:relative;
+                        .tags_area {
+                            display:block;
+                            margin-left:0;
+                        }
+                    }
+                }
+                .text {
+                    margin-left:0;
+                    text-align:center;
+                }
+            }
+            .works_section {
+                margin-top:150px;
+                h1 {
+                    margin-left:0;
+                    text-align:center;
+                }
+                .images {
+                    .block {
+                        margin-left:25px;
+                        margin-right:25px;
+                        .left {
+                            .img_area {
+                                margin:15px;
+                            }
+                        }
+                        .right {
+                            .img_area {
+                                margin:15px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width:1200px) and (max-width:1350px) {
+    body {
+        .content {
+            .earphones_section {
+                h2 {
+                    padding-left:75px;
+                }
+                h3 {
+                    margin-left:75px;
+                }
+                img {
+                    margin-left:75px;
+                }
+                p {
+                    margin-left:75px;
+                }
+                .right_zone {
+                    .category_instagram {
+                        margin-right:75px;
+                    }
+                }
+                .social_tags {
+                    margin-left:75px;
+                }
+                .text {
+                    margin-left:75px;
+                }
+            }
+            .react {
+                h2 {
+                    padding-left:75px;
+                }
+                h3 {
+                    margin-left:75px;
+                }
+                img {
+                    margin-left:75px;
+                }
+                p {
+                    margin-left:75px;
+                }
+                .right_zone {
+                    .category_instagram {
+                        margin-right:75px;
+                    }
+                }
+                .social_tags {
+                    margin-left:75px;
+                }
+                .text {
+                    margin-left:75px;
+                }
+            }
+            .tools {
+                h2 {
+                    padding-left:75px;
+                }
+                h3 {
+                    margin-left:75px;
+                }
+                img {
+                    margin-left:75px;
+                }
+                p {
+                    margin-left:75px;
+                }
+                .right_zone {
+                    .category_instagram {
+                        margin-right:75px;
+                    }
+                }
+                .social_tags {
+                    margin-left:75px;
+                }
+                .text {
+                    margin-left:75px;
+                }
+            }
+            .uxui_section {
+                h2 {
+                    padding-left:75px;
+                }
+                h3 {
+                    margin-left:75px;
+                }
+                img {
+                    margin-left:75px;
+                }
+                p {
+                    margin-left:75px;
+                }
+                .right_zone {
+                    .category_instagram {
+                        margin-right:75px;
+                    }
+                }
+                .social_tags {
+                    margin-left:75px;
+                }
+                .text {
+                    margin-left:75px;
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width:1200px) and (max-width:1475px) {
+    body {
+        .content {
+            .earphones_section {
+                .social_tags {
+                    .tags_container {
+                        .work {
+                            display:none;
+                        }
+                    }
+                }
+            }
+            .react {
+                .social_tags {
+                    .tags_container {
+                        .state {
+                            display:none;
+                        }
+                    }
+                }
+            }
+            .tools {
+                .social_tags {
+                    .tags_container {
+                        .arguments {
+                            display:none;
+                        }
+                    }
+                }
+            }
+            .uxui_section {
+                .social_tags {
+                    .tags_container {
+                        .skills {
+                            display:none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width:1601px) and (max-width:2000px) {
+    body {
+        .content {
+            border-bottom-left-radius:12.5px;
+            border-bottom-right-radius:12.5px;
+            border-top-left-radius:12.5px;
+            border-top-right-radius:12.5px;
+            margin:0 62px 0 62px;
+            .blog_section {
+                @include h1_2000;
+                @include h3_2000;
+                @include h5_2000;
+                margin-top:312px;
+                .content_area {
+                    .earphones {
+                        margin:106px 0 0 0;
+                        .blog_area {
+                            margin:0 125px 0 187px;
+                            .info {
+                                .image {
+                                    height:auto;
+                                    width:625px;
+                                }
+                                img {
+                                    border-top-left-radius:12.5px;
+                                    border-top-right-radius:12.5px;
+                                }
+                                .info_area {
+                                    border-bottom-left-radius:12.5px;
+                                    border-bottom-right-radius:12.5px;
+                                    .author {
+                                        margin:12.5px 31px 0 0;
+                                    }
+                                    .button {
+                                        border-radius:12.5px;
+                                        margin:81px 0 25px 31px;
+                                        padding:18px 56px 18px 56px;
+                                        a {
+                                            font-size:20px;
+                                            margin-left:12.5px;
+                                        }
+                                        img {
+                                            height:auto;
+                                            width:16px;
+                                        }
+                                    }
+                                    h4 {
+                                        @include h4_2000;
+                                        padding:25px 0 0 31px;
+                                    }
+                                    h5 {
+                                        @include h5_2000;
+                                        margin:12.5px 0 0 31px;
+                                    }
+                                }
+                                .small_info {
+                                    border-radius:12.5px;
+                                    height:62px;
+                                    right:-77px;
+                                    top:31px;
+                                    width:156px;
+                                    .text {
+                                        @include h5_2000;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .heading {
+                        h1 {
+                            @include h1_2000;
+                            margin:0 187px 0 0;
+                        }
+                    }
+                    .left_blog {
+                        margin:68px 0 0 0;
+                        .blog_area {
+                            margin:0 125px 0 187px;
+                            .info {
+                                .image {
+                                    height:auto;
+                                    width:625px;
+                                }
+                                img {
+                                    border-top-left-radius:12.5px;
+                                    border-top-right-radius:12.5px;
+                                }
+                                .info_area {
+                                    border-bottom-left-radius:12.5px;
+                                    border-bottom-right-radius:12.5px;
+                                    .author {
+                                        margin:12.5px 31px 0 0;
+                                    }
+                                    .button {
+                                        border-radius:12.5px;
+                                        margin:81px 0 25px 31px;
+                                        padding:18px 56px 18px 56px;
+                                        a {
+                                            font-size:20px;
+                                            margin-left:12.5px;
+                                        }
+                                        img {
+                                            height:auto;
+                                            width:16px;
+                                        }
+                                    }
+                                    h4 {
+                                        @include h4_2000;
+                                        padding:25px 0 0 31px;
+                                    }
+                                    h5 {
+                                        @include h5_2000;
+                                        margin:12.5px 0 0 31px;
+                                    }
+                                }
+                                .small_info {
+                                    border-radius:12.5px;
+                                    height:62px;
+                                    right:-77px;
+                                    top:31px;
+                                    width:156px;
+                                    .text {
+                                        @include h5_2000;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .right_blog {
+                        margin:68px 0 0 0;
+                        .blog_area {
+                            margin:0 187px 0 125px;
+                            .info {
+                                .image {
+                                    height:auto;
+                                    width:625px;
+                                }
+                                img {
+                                    border-top-left-radius:12.5px;
+                                    border-top-right-radius:12.5px;
+                                }
+                                .info_area {
+                                    border-bottom-left-radius:12.5px;
+                                    border-bottom-right-radius:12.5px;
+                                    .author {
+                                        margin:12.5px 31px 0 0;
+                                    }
+                                    .button {
+                                        border-radius:12.5px;
+                                        margin:81px 0 25px 31px;
+                                        padding:18px 56px 18px 56px;
+                                        a {
+                                            font-size:20px;
+                                            margin-left:12.5px;
+                                        }
+                                        img {
+                                            height:auto;
+                                            width:16px;
+                                        }
+                                    }
+                                    h4 {
+                                        @include h4_2000;
+                                        padding:25px 0 0 31px;
+                                    }
+                                    h5 {
+                                        @include h5_2000;
+                                        margin:12.5px 0 0 31px;
+                                    }
+                                }
+                                .small_info {
+                                    border-radius:12.5px;
+                                    height:62px;
+                                    left:-77px;
+                                    top:31px;
+                                    width:156px;
+                                    .text {
+                                        @include h5_2000;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .ux {
+                        margin:106px 0 0 0;
+                        .blog_area {
+                            margin:0 187px 0 125px;
+                            .info {
+                                .image {
+                                    height:auto;
+                                    width:625px;
+                                }
+                                img {
+                                    border-top-left-radius:12.5px;
+                                    border-top-right-radius:12.5px;
+                                }
+                                .info_area {
+                                    border-bottom-left-radius:12.5px;
+                                    border-bottom-right-radius:12.5px;
+                                    .author {
+                                        margin:12.5px 31px 0 0;
+                                    }
+                                    .button {
+                                        border-radius:12.5px;
+                                        margin:81px 0 25px 31px;
+                                        padding:18px 56px 18px 56px;
+                                        a {
+                                            font-size:20px;
+                                            margin-left:12.5px;
+                                        }
+                                        img {
+                                            height:auto;
+                                            width:16px;
+                                        }
+                                    }
+                                    h4 {
+                                        @include h4_2000;
+                                        padding:25px 0 0 31px;
+                                    }
+                                    h5 {
+                                        @include h5_2000;
+                                        margin:12.5px 0 0 31px;
+                                    }
+                                }
+                                .small_info {
+                                    border-radius:12.5px;
+                                    height:62px;
+                                    left:-77px;
+                                    top:31px;
+                                    width:156px;
+                                    .text {
+                                        @include h5_2000;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .contact_section {
+                margin-top:312px;
+                .content_area {
+                    margin:68px 187px 0 187px;
+                    .left_area {
+                        border-bottom-left-radius:12.5px;
+                        border-top-left-radius:12.5px;
+                        .info_block {
+                            p {
+                                font-size:20px;
+                                margin:0 0 0 31px;
+                            }
+                            .social_icons {
+                                .social {
+                                    margin:62px 0 0 18px;
+                                    a {
+                                        margin:12.5px;
+                                        img {
+                                            height:auto;
+                                            width:45px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .resume {
+                            margin:31px 0 125px 31px;
+                        }
+                    }
+                    .right_area {
+                        border-bottom-right-radius:12.5px;
+                        border-top-right-radius:12.5px;
+                        .address {
+                            font-size:20px;
+                            margin-top:12.5px;
+                        }
+                        .icon {
+                            margin:93px 0 0 0;
+                            img {
+                                height:auto;
+                                width:62px;
+                            }
+                        }
+                        .japan {
+                            margin-bottom:31px;
+                        }
+                        .location {
+                            margin-top:12.5px;
+                        }
+                        .offices {
+                            margin:31px 31px 0 0;
+                        }
+                        .top {
+                            margin-top:31px;
+                        }
+                    }
+                }
+                h1 {
+                    @include h1_2000;
+                }
+                h4 {
+                    @include h4_2000;
+                    margin:31px 0 0 31px;
+                }
+                h5 {
+                    @include h5_2000;
+                    margin:62px 0 0 31px;
+                }
+                .heading_container {
+                    .heading {
+                        margin-left:187px;
+                    }
+                }
+            }
+            .earphones_section {
+                margin:62px 0 62px 0;
+                a {
+                    font-size:20px;
+                }
+                .author {
+                    margin:18px 0 0 12.5px;
+                }
+                .earphones_img {
+                    height:auto;
+                    width:625px;
+                }
+                h2 {
+                    @include h2_2000;
+                    padding:62px 0 0 187px;
+                }
+                h3 {
+                    @include h3_2000;
+                    margin:31px 0 0 187px;
+                }
+                h4 {
+                    @include h4_2000;
+                    margin-bottom:18px;
+                }
+                img {
+                    margin:31px 0 0 187px;
+                }
+                .info {
+                    margin:18px 0 0 12.5px;
+                }
+                p {
+                    border-right:2.5px solid $white;
+                    font-size:20px;
+                    margin:18px 0 0 187px;
+                    padding:0 12.5px 0 0;
+                }
+                .right_zone {
+                    .category_instagram {
+                        margin:187px 181px 0 0;
+                        .category {
+                            margin-left:6.2px;
+                            a {
+                                margin-bottom:12.5px;
+                            }
+                        }
+                        .instagram_area {
+                            .instagram {
+                                margin:125px 0 0 0;
+                                .instagram_heading {
+                                    margin-left:6.2px;
+                                }
+                                .instagram_images {
+                                    margin-top:25px;
+                                    width:424.8px;
+                                    .instagram_img {
+                                        height:auto;
+                                        margin:6.2px;
+                                        width:200px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .social_tags {
+                    margin:31px 0 62px 187px;
+                    width:100%;
+                    .social_container {
+                        .social_area {
+                            a {
+                                margin:0 12.5px 0 0;
+                                .icon {
+                                    height:auto;
+                                    width:45px;
+                                }
+                            }
+                        }
+                    }
+                    .tags_container {
+                        .tags_area {
+                            margin-left:25px;
+                            .tag {
+                                border:1.25px solid $dark;
+                                font-size:16px;
+                                margin-right:2.5px;
+                                padding:6.2px 12.5px 6.2px 12.5px;
+                            }
+                            .work {
+                                display:none;
+                            }
+                        }
+                    }
+                }
+                .text {
+                    margin:12.5px 0 0 187px;
+                    width:938px;
+                }
+            }
+            footer {
+                margin-bottom:62px;
+                margin-top:312px;
+                a {
+                    font-size:20px;
+                    margin:6.2px;
+                    img {
+                        height:auto;
+                        width:45px;
+                    }
+                }
+                h4 {
+                    @include h4_2000;
+                    margin-bottom:16px;
+                }
+                h5 {
+                    @include h5_2000;
+                    margin-top:12.5px;
+                    padding-bottom:62px;
+                }
+            }
+            .react {
+                margin:62px 0 62px 0;
+                a {
+                    font-size:20px;
+                }
+                .atom {
+                    height:auto;
+                    width:625px;
+                }
+                .author {
+                    margin:18px 0 0 12.5px;
+                }
+                h2 {
+                    @include h2_2000;
+                    padding:62px 0 0 187px;
+                }
+                h3 {
+                    @include h3_2000;
+                    margin:31px 0 0 187px;
+                }
+                h4 {
+                    @include h4_2000;
+                    margin-bottom:18px;
+                }
+                img {
+                    margin:31px 0 0 187px;
+                }
+                .info {
+                    margin:18px 0 0 12.5px;
+                }
+                p {
+                    border-right:2.5px solid $white;
+                    font-size:20px;
+                    margin:18px 0 0 187px;
+                    padding:0 12.5px 0 0;
+                }
+                .right_zone {
+                    .category_instagram {
+                        margin:187px 181px 0 0;
+                        .category {
+                            margin-left:6.2px;
+                            a {
+                                margin-bottom:12.5px;
+                            }
+                        }
+                        .instagram_area {
+                            .instagram {
+                                margin:125px 0 0 0;
+                                .instagram_heading {
+                                    margin-left:6.2px;
+                                }
+                                .instagram_images {
+                                    margin-top:25px;
+                                    width:424.8px;
+                                    .instagram_img {
+                                        height:auto;
+                                        margin:6.2px;
+                                        width:200px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .social_tags {
+                    margin:31px 0 62px 187px;
+                    .social_container {
+                        .social_area {
+                            a {
+                                margin:0 12.5px 0 0;
+                                .icon {
+                                    height:auto;
+                                    width:45px;
+                                }
+                            }
+                        }
+                    }
+                    .tags_container {
+                        .tags_area {
+                            margin-left:25px;
+                            .state {
+                                display:none;
+                            }
+                            .tag {
+                                border:1.25px solid $dark;
+                                font-size:16px;
+                                margin-right:2.5px;
+                                padding:6.2px 12.5px 6.2px 12.5px;
+                            }
+                        }
+                    }
+                }
+                .text {
+                    margin:12.5px 0 0 187px;
+                    width:938px;
+                }
+            }
+            .tools {
+                margin:62px 0 62px 0;
+                a {
+                    font-size:20px;
+                }
+                .author {
+                    margin:18px 0 0 12.5px;
+                }
+                h2 {
+                    @include h2_2000;
+                    padding:62px 0 0 187px;
+                }
+                h3 {
+                    @include h3_2000;
+                    margin:31px 0 0 187px;
+                }
+                h4 {
+                    @include h4_2000;
+                    margin-bottom:18px;
+                }
+                img {
+                    margin:31px 0 0 187px;
+                }
+                .info {
+                    margin:18px 0 0 12.5px;
+                }
+                .laptop {
+                    height:auto;
+                    width:625px;
+                }
+                p {
+                    border-right:2.5px solid $white;
+                    font-size:20px;
+                    margin:18px 0 0 187px;
+                    padding:0 12.5px 0 0;
+                }
+                .right_zone {
+                    .category_instagram {
+                        margin:187px 181px 0 0;
+                        .category {
+                            margin-left:6.2px;
+                            a {
+                                margin-bottom:12.5px;
+                            }
+                        }
+                        .instagram_area {
+                            .instagram {
+                                margin:125px 0 0 0;
+                                .instagram_heading {
+                                    margin-left:6.2px;
+                                }
+                                .instagram_images {
+                                    margin-top:25px;
+                                    width:424.8px;
+                                    .instagram_img {
+                                        height:auto;
+                                        margin:6.2px;
+                                        width:200px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .social_tags {
+                    margin:31px 0 62px 187px;
+                    width:100%;
+                    .social_container {
+                        .social_area {
+                            a {
+                                margin:0 12.5px 0 0;
+                                .icon {
+                                    height:auto;
+                                    width:45px;
+                                }
+                            }
+                        }
+                    }
+                    .tags_container {
+                        .tags_area {
+                            margin-left:25px;
+                            .arguments {
+                                display:none;
+                            }
+                            .tag {
+                                border:1.25px solid $dark;
+                                font-size:16px;
+                                margin-right:2.5px;
+                                padding:6.2px 12.5px 6.2px 12.5px;
+                            }
+                        }
+                    }
+                }
+                .text {
+                    margin:12.5px 0 0 187px;
+                    width:938px;
+                }
+            }
+            .uxui_section {
+                margin:62px 0 62px 0;
+                a {
+                    font-size:20px;
+                }
+                .author {
+                    margin:18px 0 0 12.5px;
+                }
+                h2 {
+                    @include h2_2000;
+                    padding:62px 0 0 187px;
+                }
+                h3 {
+                    @include h3_2000;
+                    margin:31px 0 0 187px;
+                }
+                h4 {
+                    @include h4_2000;
+                    margin-bottom:18px;
+                }
+                img {
+                    margin:31px 0 0 187px;
+                }
+                .info {
+                    margin:18px 0 0 12.5px;
+                }
+                p {
+                    border-right:2.5px solid $white;
+                    font-size:20px;
+                    margin:18px 0 0 187px;
+                    padding:0 12.5px 0 0;
+                }
+                .right_zone {
+                    .category_instagram {
+                        margin:187px 181px 0 0;
+                        .category {
+                            margin-left:6.2px;
+                            a {
+                                margin-bottom:12.5px;
+                            }
+                        }
+                        .instagram_area {
+                            .instagram {
+                                margin:125px 0 0 0;
+                                .instagram_heading {
+                                    margin-left:6.2px;
+                                }
+                                .instagram_images {
+                                    margin-top:25px;
+                                    width:424.8px;
+                                    .instagram_img {
+                                        height:auto;
+                                        margin:6.2px;
+                                        width:200px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .social_tags {
+                    margin:31px 0 62px 187px;
+                    width:100%;
+                    .social_container {
+                        .social_area {
+                            a {
+                                margin:0 12.5px 0 0;
+                                .icon {
+                                    height:auto;
+                                    width:45px;
+                                }
+                            }
+                        }
+                    }
+                    .tags_container {
+                        .tags_area {
+                            margin-left:25px;
+                            .skills {
+                                display:none;
+                            }
+                            .tag {
+                                border:1.25px solid $dark;
+                                font-size:16px;
+                                margin-right:2.5px;
+                                padding:6.2px 12.5px 6.2px 12.5px;
+                            }
+                        }
+                    }
+                }
+                .text {
+                    margin:12.5px 0 0 187px;
+                    width:938px;
+                }
+                .ux_img {
+                    height:auto;
+                    width:625px;
+                }
+            }
+            .works_section {
+                margin-top:312px;
+                h1 {
+                    @include h1_2000;
+                    margin-left:187px;
+                }
+                .images {
+                    margin-top:31px;
+                    .block {
+                        margin-left:156px;
+                        margin-right:156px;
+                        .left {
+                            .img_area {
+                                margin:31px;
+                                img {
+                                    border-radius:12.5px;
+                                    height:auto;
+                                    width:800px;
+                                }
+                            }
+                        }
+                        .right {
+                            .img_area {
+                                margin:31px;
+                                img {
+                                    border-radius:12.5px;
+                                    height:auto;
+                                    width:800px;
+                                }
+                            }
+                        }
+                    }
+                }
+                ul {
+                    height:43px;
+                    margin-left:169px;
+                    margin-top:50px;
+                    width:750px;
+                    .first {
+                        border:1.25px solid $bluegreen;
+                        border-radius:6.25px;
+                    }
+                    li {
+                        border:1.25px solid transparent;
+                        border-radius:6.25px;
+                        font-size:20px;
+                        margin:0 18px 0 18px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width:2001px) and (max-width:2500px) {
+    body {
+        .content {
+            border-bottom-left-radius:15.6px;
+            border-bottom-right-radius:15.6px;
+            border-top-left-radius:15.6px;
+            border-top-right-radius:15.6px;
+            margin:0 77px 0 77px;
+            .blog_section {
+                @include h1_2500;
+                @include h3_2500;
+                @include h5_2500;
+                margin-top:390px;
+                .content_area {
+                    .earphones {
+                        margin:132px 0 0 0;
+                        .blog_area {
+                            margin:0 156px 0 234px;
+                            .info {
+                                .image {
+                                    height:auto;
+                                    width:781px;
+                                }
+                                img {
+                                    border-top-left-radius:15.6px;
+                                    border-top-right-radius:15.6px;
+                                }
+                                .info_area {
+                                    border-bottom-left-radius:15.6px;
+                                    border-bottom-right-radius:15.6px;
+                                    .author {
+                                        margin:15.6px 38px 0 0;
+                                    }
+                                    .button {
+                                        border-radius:15.6px;
+                                        margin:101px 0 31px 38px;
+                                        padding:22px 70px 22px 70px;
+                                        a {
+                                            font-size:25px;
+                                            margin-left:15.6px;
+                                        }
+                                        img {
+                                            height:auto;
+                                            width:20px;
+                                        }
+                                    }
+                                    h4 {
+                                        @include h4_2500;
+                                        padding:31px 0 0 38px;
+                                    }
+                                    h5 {
+                                        @include h5_2500;
+                                        margin:15.6px 0 0 38px;
+                                    }
+                                }
+                                .small_info {
+                                    border-radius:15.6px;
+                                    height:77px;
+                                    right:-96px;
+                                    top:38px;
+                                    width:195px;
+                                    .text {
+                                        @include h5_2500;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .heading {
+                        h1 {
+                            @include h1_2500;
+                            margin:0 234px 0 0;
+                        }
+                    }
+                    .left_blog {
+                        margin:85px 0 0 0;
+                        .blog_area {
+                            margin:0 156px 0 234px;
+                            .info {
+                                .image {
+                                    height:auto;
+                                    width:781px;
+                                }
+                                img {
+                                    border-top-left-radius:15.6px;
+                                    border-top-right-radius:15.6px;
+                                }
+                                .info_area {
+                                    border-bottom-left-radius:15.6px;
+                                    border-bottom-right-radius:15.6px;
+                                    .author {
+                                        margin:15.6px 38px 0 0;
+                                    }
+                                    .button {
+                                        border-radius:15.6px;
+                                        margin:101px 0 31px 38px;
+                                        padding:22px 70px 22px 70px;
+                                        a {
+                                            font-size:25px;
+                                            margin-left:15.6px;
+                                        }
+                                        img {
+                                            height:auto;
+                                            width:20px;
+                                        }
+                                    }
+                                    h4 {
+                                        @include h4_2500;
+                                        padding:31px 0 0 38px;
+                                    }
+                                    h5 {
+                                        @include h5_2500;
+                                        margin:15.6px 0 0 38px;
+                                    }
+                                }
+                                .small_info {
+                                    border-radius:15.6px;
+                                    height:77px;
+                                    right:-96px;
+                                    top:38px;
+                                    width:195px;
+                                    .text {
+                                        @include h5_2500;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .right_blog {
+                        margin:85px 0 0 0;
+                        .blog_area {
+                            margin:0 234px 0 156px;
+                            .info {
+                                .image {
+                                    height:auto;
+                                    width:781px;
+                                }
+                                img {
+                                    border-top-left-radius:15.6px;
+                                    border-top-right-radius:15.6px;
+                                }
+                                .info_area {
+                                    border-bottom-left-radius:15.6px;
+                                    border-bottom-right-radius:15.6px;
+                                    .author {
+                                        margin:15.6px 38px 0 0;
+                                    }
+                                    .button {
+                                        border-radius:15.6px;
+                                        margin:101px 0 31px 38px;
+                                        padding:22px 70px 22px 70px;
+                                        a {
+                                            font-size:25px;
+                                            margin-left:15.6px;
+                                        }
+                                        img {
+                                            height:auto;
+                                            width:20px;
+                                        }
+                                    }
+                                    h4 {
+                                        @include h4_2500;
+                                        padding:31px 0 0 38px;
+                                    }
+                                    h5 {
+                                        @include h5_2500;
+                                        margin:15.6px 0 0 38px;
+                                    }
+                                }
+                                .small_info {
+                                    border-radius:15.6px;
+                                    height:77px;
+                                    left:-96px;
+                                    top:38px;
+                                    width:195px;
+                                    .text {
+                                        @include h5_2500;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .ux {
+                        margin:132px 0 0 0;
+                        .blog_area {
+                            margin:0 234px 0 156px;
+                            .info {
+                                .image {
+                                    height:auto;
+                                    width:781px;
+                                }
+                                img {
+                                    border-top-left-radius:15.6px;
+                                    border-top-right-radius:15.6px;
+                                }
+                                .info_area {
+                                    border-bottom-left-radius:15.6px;
+                                    border-bottom-right-radius:15.6px;
+                                    .author {
+                                        margin:15.6px 38px 0 0;
+                                    }
+                                    .button {
+                                        border-radius:15.6px;
+                                        margin:101px 0 31px 38px;
+                                        padding:22px 70px 22px 70px;
+                                        a {
+                                            font-size:25px;
+                                            margin-left:15.6px;
+                                        }
+                                        img {
+                                            height:auto;
+                                            width:20px;
+                                        }
+                                    }
+                                    h4 {
+                                        @include h4_2500;
+                                        padding:31px 0 0 38px;
+                                    }
+                                    h5 {
+                                        @include h5_2500;
+                                        margin:15.6px 0 0 38px;
+                                    }
+                                }
+                                .small_info {
+                                    border-radius:15.6px;
+                                    height:77px;
+                                    left:-96px;
+                                    top:38px;
+                                    width:195px;
+                                    .text {
+                                        @include h5_2500;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .contact_section {
+                margin-top:390px;
+                .content_area {
+                    margin:85px 234px 0 234px;
+                    .left_area {
+                        border-bottom-left-radius:15.6px;
+                        border-top-left-radius:15.6px;
+                        .info_block {
+                            p {
+                                font-size:25px;
+                                margin:0 0 0 38px;
+                            }
+                            .social_icons {
+                                .social {
+                                    margin:77px 0 0 22px;
+                                    a {
+                                        margin:15.6px;
+                                        img {
+                                            height:auto;
+                                            width:56px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .resume {
+                            margin:38px 0 156px 38px;
+                        }
+                    }
+                    .right_area {
+                        border-bottom-right-radius:15.6px;
+                        border-top-right-radius:15.6px;
+                        .address {
+                            font-size:25px;
+                            margin-top:15.6px;
+                        }
+                        .icon {
+                            margin:116px 0 0 0;
+                            img {
+                                height:auto;
+                                width:77px;
+                            }
+                        }
+                        .japan {
+                            margin-bottom:38px;
+                        }
+                        .location {
+                            margin-top:15.6px;
+                        }
+                        .offices {
+                            margin:38px 38px 0 0;
+                        }
+                        .top {
+                            margin-top:38px;
+                        }
+                    }
+                }
+                h1 {
+                    @include h1_2500;
+                }
+                h4 {
+                    @include h4_2500;
+                    margin:38px 0 0 38px;
+                }
+                h5 {
+                    @include h5_2500;
+                    margin:77px 0 0 38px;
+                }
+                .heading_container {
+                    .heading {
+                        margin-left:234px;
+                    }
+                }
+            }
+            .earphones_section {
+                margin:77px 0 77px 0;
+                a {
+                    font-size:25px;
+                }
+                .author {
+                    margin:22px 0 0 15.6px;
+                }
+                .earphones_img {
+                    height:auto;
+                    width:781px;
+                }
+                h2 {
+                    @include h2_2500;
+                    padding:77px 0 0 234px;
+                }
+                h3 {
+                    @include h3_2500;
+                    margin:38px 0 0 234px;
+                }
+                h4 {
+                    @include h4_2500;
+                    margin-bottom:22px;
+                }
+                img {
+                    margin:38px 0 0 234px;
+                }
+                .info {
+                    margin:22px 0 0 15.6px;
+                }
+                p {
+                    border-right:3.1px solid $white;
+                    font-size:25px;
+                    margin:22px 0 0 234px;
+                    padding:0 15.6px 0 0;
+                }
+                .right_zone {
+                    .category_instagram {
+                        margin:234px 226px 0 0;
+                        .category {
+                            margin-left:7.7px;
+                            a {
+                                margin-bottom:15.6px;
+                            }
+                        }
+                        .instagram_area {
+                            .instagram {
+                                margin:156px 0 0 0;
+                                .instagram_heading {
+                                    margin-left:7.7px;
+                                }
+                                .instagram_images {
+                                    margin-top:31px;
+                                    width:530.8px;
+                                    .instagram_img {
+                                        height:auto;
+                                        margin:7.7px;
+                                        width:250px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .social_tags {
+                    margin:38px 0 77px 234px;
+                    .social_container {
+                        .social_area {
+                            a {
+                                margin:0 15.6px 0 0;
+                                .icon {
+                                    height:auto;
+                                    width:56px;
+                                }
+                            }
+                        }
+                    }
+                    .tags_container {
+                        .tags_area {
+                            margin-left:31px;
+                            .tag {
+                                border:1.56px solid $dark;
+                                font-size:20px;
+                                margin-right:3.1px;
+                                padding:7.7px 15.6px 7.7px 15.6px;
+                            }
+                            .work {
+                                display:none;
+                            }
+                        }
+                    }
+                }
+                .text {
+                    margin:15.6px 0 0 234px;
+                    width:1173px;
+                }
+            }
+            footer {
+                margin-bottom:77px;
+                margin-top:390px;
+                a {
+                    font-size:25px;
+                    margin:7.7px;
+                    img {
+                        height:auto;
+                        width:56px;
+                    }
+                }
+                h4 {
+                    @include h4_2500;
+                    margin-bottom:20px;
+                }
+                h5 {
+                    @include h5_2500;
+                    margin-top:15.6px;
+                    padding-bottom:77px;
+                }
+            }
+            .react {
+                margin:77px 0 77px 0;
+                a {
+                    font-size:25px;
+                }
+                .atom {
+                    height:auto;
+                    width:781px;
+                }
+                .author {
+                    margin:22px 0 0 15.6px;
+                }
+                h2 {
+                    @include h2_2500;
+                    padding:77px 0 0 234px;
+                }
+                h3 {
+                    @include h3_2500;
+                    margin:38px 0 0 234px;
+                }
+                h4 {
+                    @include h4_2500;
+                    margin-bottom:22px;
+                }
+                img {
+                    margin:38px 0 0 234px;
+                }
+                .info {
+                    margin:22px 0 0 15.6px;
+                }
+                p {
+                    border-right:3.1px solid $white;
+                    font-size:25px;
+                    margin:22px 0 0 234px;
+                    padding:0 15.6px 0 0;
+                }
+                .right_zone {
+                    .category_instagram {
+                        margin:234px 226px 0 0;
+                        .category {
+                            margin-left:7.7px;
+                            a {
+                                margin-bottom:15.6px;
+                            }
+                        }
+                        .instagram_area {
+                            .instagram {
+                                margin:156px 0 0 0;
+                                .instagram_heading {
+                                    margin-left:7.7px;
+                                }
+                                .instagram_images {
+                                    margin-top:31px;
+                                    width:530.8px;
+                                    .instagram_img {
+                                        height:auto;
+                                        margin:7.7px;
+                                        width:250px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .social_tags {
+                    margin:38px 0 77px 234px;
+                    .social_container {
+                        .social_area {
+                            a {
+                                margin:0 15.6px 0 0;
+                                .icon {
+                                    height:auto;
+                                    width:56px;
+                                }
+                            }
+                        }
+                    }
+                    .tags_container {
+                        .tags_area {
+                            margin-left:31px;
+                            .state {
+                                display:none;
+                            }
+                            .tag {
+                                border:1.56px solid $dark;
+                                font-size:20px;
+                                margin-right:3.1px;
+                                padding:7.7px 15.6px 7.7px 15.6px;
+                            }
+                        }
+                    }
+                }
+                .text {
+                    margin:15.6px 0 0 234px;
+                    width:1173px;
+                }
+            }
+            .tools {
+                margin:77px 0 77px 0;
+                a {
+                    font-size:25px;
+                }
+                .author {
+                    margin:22px 0 0 15.6px;
+                }
+                h2 {
+                    @include h2_2500;
+                    padding:77px 0 0 234px;
+                }
+                h3 {
+                    @include h3_2500;
+                    margin:38px 0 0 234px;
+                }
+                h4 {
+                    @include h4_2500;
+                    margin-bottom:22px;
+                }
+                img {
+                    margin:38px 0 0 234px;
+                }
+                .info {
+                    margin:22px 0 0 15.6px;
+                }
+                .laptop {
+                    height:auto;
+                    width:781px;
+                }
+                p {
+                    border-right:3.1px solid $white;
+                    font-size:25px;
+                    margin:22px 0 0 234px;
+                    padding:0 15.6px 0 0;
+                }
+                .right_zone {
+                    .category_instagram {
+                        margin:234px 226px 0 0;
+                        .category {
+                            margin-left:7.7px;
+                            a {
+                                margin-bottom:15.6px;
+                            }
+                        }
+                        .instagram_area {
+                            .instagram {
+                                margin:156px 0 0 0;
+                                .instagram_heading {
+                                    margin-left:7.7px;
+                                }
+                                .instagram_images {
+                                    margin-top:31px;
+                                    width:530.8px;
+                                    .instagram_img {
+                                        height:auto;
+                                        margin:7.7px;
+                                        width:250px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .social_tags {
+                    margin:38px 0 77px 234px;
+                    .social_container {
+                        .social_area {
+                            a {
+                                margin:0 15.6px 0 0;
+                                .icon {
+                                    height:auto;
+                                    width:56px;
+                                }
+                            }
+                        }
+                    }
+                    .tags_container {
+                        .tags_area {
+                            margin-left:31px;
+                            .arguments {
+                                display:none;
+                            }
+                            .tag {
+                                border:1.56px solid $dark;
+                                font-size:20px;
+                                margin-right:3.1px;
+                                padding:7.7px 15.6px 7.7px 15.6px;
+                            }
+                        }
+                    }
+                }
+                .text {
+                    margin:15.6px 0 0 234px;
+                    width:1173px;
+                }
+            }
+            .uxui_section {
+                margin:77px 0 77px 0;
+                a {
+                    font-size:25px;
+                }
+                .author {
+                    margin:22px 0 0 15.6px;
+                }
+                h2 {
+                    @include h2_2500;
+                    padding:77px 0 0 234px;
+                }
+                h3 {
+                    @include h3_2500;
+                    margin:38px 0 0 234px;
+                }
+                h4 {
+                    @include h4_2500;
+                    margin-bottom:22px;
+                }
+                img {
+                    margin:38px 0 0 234px;
+                }
+                .info {
+                    margin:22px 0 0 15.6px;
+                }
+                p {
+                    border-right:3.1px solid $white;
+                    font-size:25px;
+                    margin:22px 0 0 234px;
+                    padding:0 15.6px 0 0;
+                }
+                .right_zone {
+                    .category_instagram {
+                        margin:234px 226px 0 0;
+                        .category {
+                            margin-left:7.7px;
+                            a {
+                                margin-bottom:15.6px;
+                            }
+                        }
+                        .instagram_area {
+                            .instagram {
+                                margin:156px 0 0 0;
+                                .instagram_heading {
+                                    margin-left:7.7px;
+                                }
+                                .instagram_images {
+                                    margin-top:31px;
+                                    width:530.8px;
+                                    .instagram_img {
+                                        height:auto;
+                                        margin:7.7px;
+                                        width:250px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .social_tags {
+                    margin:38px 0 77px 234px;
+                    .social_container {
+                        .social_area {
+                            a {
+                                margin:0 15.6px 0 0;
+                                .icon {
+                                    height:auto;
+                                    width:56px;
+                                }
+                            }
+                        }
+                    }
+                    .tags_container {
+                        .tags_area {
+                            margin-left:31px;
+                            .skills {
+                                display:none;
+                            }
+                            .tag {
+                                border:1.56px solid $dark;
+                                font-size:20px;
+                                margin-right:3.1px;
+                                padding:7.7px 15.6px 7.7px 15.6px;
+                            }
+                        }
+                    }
+                }
+                .text {
+                    margin:15.6px 0 0 234px;
+                    width:1173px;
+                }
+                .ux_img {
+                    height:auto;
+                    width:781px;
+                }
+            }
+            .works_section {
+                margin-top:390px;
+                h1 {
+                    @include h1_2500;
+                    margin-left:234px;
+                }
+                .images {
+                    margin-top:38px;
+                    .block {
+                        margin-left:195px;
+                        margin-right:195px;
+                        .left {
+                            .img_area {
+                                margin:38px;
+                                img {
+                                    border-radius:15.6px;
+                                    height:auto;
+                                    width:1000px;
+                                }
+                            }
+                        }
+                        .right {
+                            .img_area {
+                                margin:38px;
+                                img {
+                                    border-radius:15.6px;
+                                    height:auto;
+                                    width:1000px;
+                                }
+                            }
+                        }
+                    }
+                }
+                ul {
+                    height:53px;
+                    margin-left:211px;
+                    margin-top:62px;
+                    width:938px;
+                    .first {
+                        border:1.56px solid $bluegreen;
+                        border-radius:7.7px;
+                    }
+                    li {
+                        border:1.56px solid transparent;
+                        border-radius:7.7px;
+                        font-size:25px;
+                        margin:0 23px 0 23px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width:2501px) and (max-width:3125px) {
+    body {
+        .content {
+            border-bottom-left-radius:19.5px;
+            border-bottom-right-radius:19.5px;
+            border-top-left-radius:19.5px;
+            border-top-right-radius:19.5px;
+            margin:0 96px 0 96px;
+            .blog_section {
+                @include h1_3125;
+                @include h3_3125;
+                @include h5_3125;
+                margin-top:488px;
+                .content_area {
+                    .earphones {
+                        margin:165px 0 0 0;
+                        .blog_area {
+                            margin:0 195px 0 293px;
+                            .info {
+                                .image {
+                                    height:auto;
+                                    width:976px;
+                                }
+                                img {
+                                    border-top-left-radius:19.5px;
+                                    border-top-right-radius:19.5px;
+                                }
+                                .info_area {
+                                    border-bottom-left-radius:19.5px;
+                                    border-bottom-right-radius:19.5px;
+                                    .author {
+                                        margin:19.5px 47px 0 0;
+                                    }
+                                    .button {
+                                        border-radius:19.5px;
+                                        margin:126px 0 38px 47px;
+                                        padding:27px 87px 27px 87px;
+                                        a {
+                                            font-size:31px;
+                                            margin-left:19.5px;
+                                        }
+                                        img {
+                                            height:auto;
+                                            width:25px;
+                                        }
+                                    }
+                                    h4 {
+                                        @include h4_3125;
+                                        padding:38px 0 0 47px;
+                                    }
+                                    h5 {
+                                        @include h5_3125;
+                                        margin:19.5px 0 0 47px;
+                                    }
+                                }
+                                .small_info {
+                                    border-radius:19.5px;
+                                    height:96px;
+                                    right:-120px;
+                                    top:47px;
+                                    width:243px;
+                                    .text {
+                                        @include h5_3125;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .heading {
+                        h1 {
+                            @include h1_3125;
+                            margin:0 293px 0 0;
+                        }
+                    }
+                    .left_blog {
+                        margin:106px 0 0 0;
+                        .blog_area {
+                            margin:0 195px 0 293px;
+                            .info {
+                                .image {
+                                    height:auto;
+                                    width:976px;
+                                }
+                                img {
+                                    border-top-left-radius:19.5px;
+                                    border-top-right-radius:19.5px;
+                                }
+                                .info_area {
+                                    border-bottom-left-radius:19.5px;
+                                    border-bottom-right-radius:19.5px;
+                                    .author {
+                                        margin:19.5px 47px 0 0;
+                                    }
+                                    .button {
+                                        border-radius:19.5px;
+                                        margin:126px 0 38px 47px;
+                                        padding:27px 87px 27px 87px;
+                                        a {
+                                            font-size:31px;
+                                            margin-left:19.5px;
+                                        }
+                                        img {
+                                            height:auto;
+                                            width:25px;
+                                        }
+                                    }
+                                    h4 {
+                                        @include h4_3125;
+                                        padding:38px 0 0 47px;
+                                    }
+                                    h5 {
+                                        @include h5_3125;
+                                        margin:19.5px 0 0 47px;
+                                    }
+                                }
+                                .small_info {
+                                    border-radius:19.5px;
+                                    height:96px;
+                                    right:-120px;
+                                    top:47px;
+                                    width:243px;
+                                    .text {
+                                        @include h5_3125;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .right_blog {
+                        margin:106px 0 0 0;
+                        .blog_area {
+                            margin:0 293px 0 195px;
+                            .info {
+                                .image {
+                                    height:auto;
+                                    width:976px;
+                                }
+                                img {
+                                    border-top-left-radius:19.5px;
+                                    border-top-right-radius:19.5px;
+                                }
+                                .info_area {
+                                    border-bottom-left-radius:19.5px;
+                                    border-bottom-right-radius:19.5px;
+                                    .author {
+                                        margin:19.5px 47px 0 0;
+                                    }
+                                    .button {
+                                        border-radius:19.5px;
+                                        margin:126px 0 38px 47px;
+                                        padding:27px 87px 27px 87px;
+                                        a {
+                                            font-size:31px;
+                                            margin-left:19.5px;
+                                        }
+                                        img {
+                                            height:auto;
+                                            width:25px;
+                                        }
+                                    }
+                                    h4 {
+                                        @include h4_3125;
+                                        padding:38px 0 0 47px;
+                                    }
+                                    h5 {
+                                        @include h5_3125;
+                                        margin:19.5px 0 0 47px;
+                                    }
+                                }
+                                .small_info {
+                                    border-radius:19.5px;
+                                    height:96px;
+                                    left:-120px;
+                                    top:47px;
+                                    width:243px;
+                                    .text {
+                                        @include h5_3125;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .ux {
+                        margin:165px 0 0 0;
+                        .blog_area {
+                            margin:0 293px 0 195px;
+                            .info {
+                                .image {
+                                    height:auto;
+                                    width:976px;
+                                }
+                                img {
+                                    border-top-left-radius:19.5px;
+                                    border-top-right-radius:19.5px;
+                                }
+                                .info_area {
+                                    border-bottom-left-radius:19.5px;
+                                    border-bottom-right-radius:19.5px;
+                                    .author {
+                                        margin:19.5px 47px 0 0;
+                                    }
+                                    .button {
+                                        border-radius:19.5px;
+                                        margin:126px 0 38px 47px;
+                                        padding:27px 87px 27px 87px;
+                                        a {
+                                            font-size:31px;
+                                            margin-left:19.5px;
+                                        }
+                                        img {
+                                            height:auto;
+                                            width:25px;
+                                        }
+                                    }
+                                    h4 {
+                                        @include h4_3125;
+                                        padding:38px 0 0 47px;
+                                    }
+                                    h5 {
+                                        @include h5_3125;
+                                        margin:19.5px 0 0 47px;
+                                    }
+                                }
+                                .small_info {
+                                    border-radius:19.5px;
+                                    height:96px;
+                                    left:-120px;
+                                    top:47px;
+                                    width:243px;
+                                    .text {
+                                        @include h5_3125;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .contact_section {
+                margin-top:488px;
+                .content_area {
+                    margin:106px 293px 0 293px;
+                    .left_area {
+                        border-bottom-left-radius:19.5px;
+                        border-top-left-radius:19.5px;
+                        .info_block {
+                            p {
+                                font-size:31px;
+                                margin:0 0 0 47px;
+                            }
+                            .social_icons {
+                                .social {
+                                    margin:96px 0 0 27px;
+                                    a {
+                                        margin:19.5px;
+                                        img {
+                                            height:auto;
+                                            width:70px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .resume {
+                            margin:47px 0 195px 47px;
+                        }
+                    }
+                    .right_area {
+                        border-bottom-right-radius:19.5px;
+                        border-top-right-radius:19.5px;
+                        .address {
+                            font-size:31px;
+                            margin-top:19.5px;
+                        }
+                        .icon {
+                            margin:145px 0 0 0;
+                            img {
+                                height:auto;
+                                width:96px;
+                            }
+                        }
+                        .japan {
+                            margin-bottom:47px;
+                        }
+                        .location {
+                            margin-top:19.5px;
+                        }
+                        .offices {
+                            margin:47px 47px 0 0;
+                        }
+                        .top {
+                            margin-top:47px;
+                        }
+                    }
+                }
+                h1 {
+                    @include h1_3125;
+                }
+                h4 {
+                    @include h4_3125;
+                    margin:38px 0 0 38px;
+                }
+                h5 {
+                    @include h5_3125;
+                    margin:96px 0 0 47px;
+                }
+                .heading_container {
+                    .heading {
+                        margin-left:293px;
+                    }
+                }
+            }
+            .earphones_section {
+                margin:96px 0 96px 0;
+                a {
+                    font-size:31px;
+                }
+                .author {
+                    margin:27px 0 0 19.5px;
+                }
+                .earphones_img {
+                    height:auto;
+                    width:976px;
+                }
+                h2 {
+                    @include h2_3125;
+                    padding:96px 0 0 293px;
+                }
+                h3 {
+                    @include h3_3125;
+                    margin:47px 0 0 293px;
+                }
+                h4 {
+                    @include h4_3125;
+                    margin-bottom:27px;
+                }
+                img {
+                    margin:47px 0 0 293px;
+                }
+                .info {
+                    margin:27px 0 0 19.5px;
+                }
+                p {
+                    border-right:3.8px solid $white;
+                    font-size:31px;
+                    margin:27px 0 0 293px;
+                    padding:0 19.5px 0 0;
+                }
+                .right_zone {
+                    .category_instagram {
+                        margin:293px 283px 0 0;
+                        .category {
+                            margin-left:9.6px;
+                            a {
+                                margin-bottom:19.5px;
+                            }
+                        }
+                        .instagram_area {
+                            .instagram {
+                                margin:195px 0 0 0;
+                                .instagram_heading {
+                                    margin-left:9.6px;
+                                }
+                                .instagram_images {
+                                    margin-top:38px;
+                                    width:662.4px;
+                                    .instagram_img {
+                                        height:auto;
+                                        margin:9.6px;
+                                        width:312px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .social_tags {
+                    margin:47px 0 96px 293px;
+                    .social_container {
+                        .social_area {
+                            a {
+                                margin:0 19.5px 0 0;
+                                .icon {
+                                    height:auto;
+                                    width:70px;
+                                }
+                            }
+                        }
+                    }
+                    .tags_container {
+                        .tags_area {
+                            margin-left:38px;
+                            .tag {
+                                border:1.95px solid $dark;
+                                font-size:25px;
+                                margin-right:3.8px;
+                                padding:9.6px 19.5px 9.6px 19.5px;
+                            }
+                            .work {
+                                display:none;
+                            }
+                        }
+                    }
+                }
+                .text {
+                    margin:19.5px 0 0 293px;
+                    width:1466px;
+                }
+            }
+            footer {
+                margin-bottom:96px;
+                margin-top:488px;
+                a {
+                    font-size:31px;
+                    margin:9.6px;
+                    img {
+                        height:auto;
+                        width:70px;
+                    }
+                }
+                h4 {
+                    @include h4_3125;
+                    margin-bottom:25px;
+                }
+                h5 {
+                    @include h5_3125;
+                    margin-top:19.5px;
+                    padding-bottom:96px;
+                }
+            }
+            .react {
+                margin:96px 0 96px 0;
+                a {
+                    font-size:31px;
+                }
+                .atom {
+                    height:auto;
+                    width:976px;
+                }
+                .author {
+                    margin:27px 0 0 19.5px;
+                }
+                h2 {
+                    @include h2_3125;
+                    padding:96px 0 0 293px;
+                }
+                h3 {
+                    @include h3_3125;
+                    margin:47px 0 0 293px;
+                }
+                h4 {
+                    @include h4_3125;
+                    margin-bottom:27px;
+                }
+                img {
+                    margin:47px 0 0 293px;
+                }
+                .info {
+                    margin:27px 0 0 19.5px;
+                }
+                p {
+                    border-right:3.8px solid $white;
+                    font-size:31px;
+                    margin:27px 0 0 293px;
+                    padding:0 19.5px 0 0;
+                }
+                .right_zone {
+                    .category_instagram {
+                        margin:293px 283px 0 0;
+                        .category {
+                            margin-left:9.6px;
+                            a {
+                                margin-bottom:19.5px;
+                            }
+                        }
+                        .instagram_area {
+                            .instagram {
+                                margin:195px 0 0 0;
+                                .instagram_heading {
+                                    margin-left:9.6px;
+                                }
+                                .instagram_images {
+                                    margin-top:38px;
+                                    width:662.4px;
+                                    .instagram_img {
+                                        height:auto;
+                                        margin:9.6px;
+                                        width:312px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .social_tags {
+                    margin:47px 0 96px 293px;
+                    .social_container {
+                        .social_area {
+                            a {
+                                margin:0 19.5px 0 0;
+                                .icon {
+                                    height:auto;
+                                    width:70px;
+                                }
+                            }
+                        }
+                    }
+                    .tags_container {
+                        .tags_area {
+                            margin-left:38px;
+                            .state {
+                                display:none;
+                            }
+                            .tag {
+                                border:1.95px solid $dark;
+                                font-size:25px;
+                                margin-right:3.8px;
+                                padding:9.6px 19.5px 9.6px 19.5px;
+                            }
+                        }
+                    }
+                }
+                .text {
+                    margin:19.5px 0 0 293px;
+                    width:1466px;
+                }
+            }
+            .tools {
+                margin:96px 0 96px 0;
+                a {
+                    font-size:31px;
+                }
+                .author {
+                    margin:27px 0 0 19.5px;
+                }
+                h2 {
+                    @include h2_3125;
+                    padding:96px 0 0 293px;
+                }
+                h3 {
+                    @include h3_3125;
+                    margin:47px 0 0 293px;
+                }
+                h4 {
+                    @include h4_3125;
+                    margin-bottom:27px;
+                }
+                img {
+                    margin:47px 0 0 293px;
+                }
+                .info {
+                    margin:27px 0 0 19.5px;
+                }
+                .laptop {
+                    height:auto;
+                    width:976px;
+                }
+                p {
+                    border-right:3.8px solid $white;
+                    font-size:31px;
+                    margin:27px 0 0 293px;
+                    padding:0 19.5px 0 0;
+                }
+                .right_zone {
+                    .category_instagram {
+                        margin:293px 283px 0 0;
+                        .category {
+                            margin-left:9.6px;
+                            a {
+                                margin-bottom:19.5px;
+                            }
+                        }
+                        .instagram_area {
+                            .instagram {
+                                margin:195px 0 0 0;
+                                .instagram_heading {
+                                    margin-left:9.6px;
+                                }
+                                .instagram_images {
+                                    margin-top:38px;
+                                    width:662.4px;
+                                    .instagram_img {
+                                        height:auto;
+                                        margin:9.6px;
+                                        width:312px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .social_tags {
+                    margin:47px 0 96px 293px;
+                    .social_container {
+                        .social_area {
+                            a {
+                                margin:0 19.5px 0 0;
+                                .icon {
+                                    height:auto;
+                                    width:70px;
+                                }
+                            }
+                        }
+                    }
+                    .tags_container {
+                        .tags_area {
+                            margin-left:38px;
+                            .arguments {
+                                display:none;
+                            }
+                            .tag {
+                                border:1.95px solid $dark;
+                                font-size:25px;
+                                margin-right:3.8px;
+                                padding:9.6px 19.5px 9.6px 19.5px;
+                            }
+                        }
+                    }
+                }
+                .text {
+                    margin:19.5px 0 0 293px;
+                    width:1466px;
+                }
+            }
+            .uxui_section {
+                margin:96px 0 96px 0;
+                a {
+                    font-size:31px;
+                }
+                .author {
+                    margin:27px 0 0 19.5px;
+                }
+                h2 {
+                    @include h2_3125;
+                    padding:96px 0 0 293px;
+                }
+                h3 {
+                    @include h3_3125;
+                    margin:47px 0 0 293px;
+                }
+                h4 {
+                    @include h4_3125;
+                    margin-bottom:27px;
+                }
+                img {
+                    margin:47px 0 0 293px;
+                }
+                .info {
+                    margin:27px 0 0 19.5px;
+                }
+                p {
+                    border-right:3.8px solid $white;
+                    font-size:31px;
+                    margin:27px 0 0 293px;
+                    padding:0 19.5px 0 0;
+                }
+                .right_zone {
+                    .category_instagram {
+                        margin:293px 283px 0 0;
+                        .category {
+                            margin-left:9.6px;
+                            a {
+                                margin-bottom:19.5px;
+                            }
+                        }
+                        .instagram_area {
+                            .instagram {
+                                margin:195px 0 0 0;
+                                .instagram_heading {
+                                    margin-left:9.6px;
+                                }
+                                .instagram_images {
+                                    margin-top:38px;
+                                    width:662.4px;
+                                    .instagram_img {
+                                        height:auto;
+                                        margin:9.6px;
+                                        width:312px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .social_tags {
+                    margin:47px 0 96px 293px;
+                    .social_container {
+                        .social_area {
+                            a {
+                                margin:0 19.5px 0 0;
+                                .icon {
+                                    height:auto;
+                                    width:70px;
+                                }
+                            }
+                        }
+                    }
+                    .tags_container {
+                        .tags_area {
+                            margin-left:38px;
+                            .skills {
+                                display:none;
+                            }
+                            .tag {
+                                border:1.95px solid $dark;
+                                font-size:25px;
+                                margin-right:3.8px;
+                                padding:9.6px 19.5px 9.6px 19.5px;
+                            }
+                        }
+                    }
+                }
+                .text {
+                    margin:19.5px 0 0 293px;
+                    width:1466px;
+                }
+                .ux_img {
+                    height:auto;
+                    width:976px;
+                }
+            }
+            .works_section {
+                margin-top:488px;
+                h1 {
+                    @include h1_3125;
+                    margin-left:293px;
+                }
+                .images {
+                    margin-top:47px;
+                    .block {
+                        margin-left:243px;
+                        margin-right:243px;
+                        .left {
+                            .img_area {
+                                margin:47px;
+                                img {
+                                    border-radius:19.5px;
+                                    height:auto;
+                                    width:1250px;
+                                }
+                            }
+                        }
+                        .right {
+                            .img_area {
+                                margin:47px;
+                                img {
+                                    border-radius:19.5px;
+                                    height:auto;
+                                    width:1250px;
+                                }
+                            }
+                        }
+                    }
+                }
+                ul {
+                    height:66px;
+                    margin-left:264px;
+                    margin-top:77px;
+                    width:1173px;
+                    .first {
+                        border:1.95px solid $bluegreen;
+                        border-radius:9.6px;
+                    }
+                    li {
+                        border:1.95px solid transparent;
+                        border-radius:9.6px;
+                        font-size:31px;
+                        margin:0 29px 0 29px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width:3126px) {
+    body {
+        .content {
+            border-bottom-left-radius:24.3px;
+            border-bottom-right-radius:24.3px;
+            border-top-left-radius:24.3px;
+            border-top-right-radius:24.3px;
+            margin:0 120px 0 120px;
+            .blog_section {
+                @include h1_3850;
+                @include h3_3850;
+                @include h5_3850;
+                margin-top:610px;
+                .content_area {
+                    .earphones {
+                        margin:206px 0 0 0;
+                        .blog_area {
+                            margin:0 243px 0 366px;
+                            .info {
+                                .image {
+                                    height:auto;
+                                    width:1220px;
+                                }
+                                img {
+                                    border-top-left-radius:24.3px;
+                                    border-top-right-radius:24.3px;
+                                }
+                                .info_area {
+                                    border-bottom-left-radius:24.3px;
+                                    border-bottom-right-radius:24.3px;
+                                    .author {
+                                        margin:24.3px 58px 0 0;
+                                    }
+                                    .button {
+                                        border-radius:24.3px;
+                                        margin:157px 0 47px 58px;
+                                        padding:33px 108px 33px 108px;
+                                        a {
+                                            font-size:38px;
+                                            margin-left:24.3px;
+                                        }
+                                        img {
+                                            height:auto;
+                                            width:31px;
+                                        }
+                                    }
+                                    h4 {
+                                        @include h4_3850;
+                                        padding:47px 0 0 58px;
+                                    }
+                                    h5 {
+                                        @include h5_3850;
+                                        margin:24.3px 0 0 58px;
+                                    }
+                                }
+                                .small_info {
+                                    border-radius:24.3px;
+                                    height:120px;
+                                    right:-150px;
+                                    top:58px;
+                                    width:304px;
+                                    .text {
+                                        @include h5_3850;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .heading {
+                        h1 {
+                            @include h1_3850;
+                            margin:0 366px 0 0;
+                        }
+                    }
+                    .left_blog {
+                        margin:132px 0 0 0;
+                        .blog_area {
+                            margin:0 243px 0 366px;
+                            .info {
+                                .image {
+                                    height:auto;
+                                    width:1220px;
+                                }
+                                img {
+                                    border-top-left-radius:24.3px;
+                                    border-top-right-radius:24.3px;
+                                }
+                                .info_area {
+                                    border-bottom-left-radius:24.3px;
+                                    border-bottom-right-radius:24.3px;
+                                    .author {
+                                        margin:24.3px 58px 0 0;
+                                    }
+                                    .button {
+                                        border-radius:24.3px;
+                                        margin:157px 0 47px 58px;
+                                        padding:33px 108px 33px 108px;
+                                        a {
+                                            font-size:38px;
+                                            margin-left:24.3px;
+                                        }
+                                        img {
+                                            height:auto;
+                                            width:31px;
+                                        }
+                                    }
+                                    h4 {
+                                        @include h4_3850;
+                                        padding:47px 0 0 58px;
+                                    }
+                                    h5 {
+                                        @include h5_3850;
+                                        margin:24.3px 0 0 58px;
+                                    }
+                                }
+                                .small_info {
+                                    border-radius:24.3px;
+                                    height:120px;
+                                    right:-150px;
+                                    top:58px;
+                                    width:304px;
+                                    .text {
+                                        @include h5_3850;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .right_blog {
+                        margin:132px 0 0 0;
+                        .blog_area {
+                            margin:0 366px 0 243px;
+                            .info {
+                                .image {
+                                    height:auto;
+                                    width:1220px;
+                                }
+                                img {
+                                    border-top-left-radius:24.3px;
+                                    border-top-right-radius:24.3px;
+                                }
+                                .info_area {
+                                    border-bottom-left-radius:24.3px;
+                                    border-bottom-right-radius:24.3px;
+                                    .author {
+                                        margin:24.3px 58px 0 0;
+                                    }
+                                    .button {
+                                        border-radius:24.3px;
+                                        margin:157px 0 47px 58px;
+                                        padding:33px 108px 33px 108px;
+                                        a {
+                                            font-size:38px;
+                                            margin-left:24.3px;
+                                        }
+                                        img {
+                                            height:auto;
+                                            width:31px;
+                                        }
+                                    }
+                                    h4 {
+                                        @include h4_3850;
+                                        padding:47px 0 0 58px;
+                                    }
+                                    h5 {
+                                        @include h5_3850;
+                                        margin:24.3px 0 0 58px;
+                                    }
+                                }
+                                .small_info {
+                                    border-radius:24.3px;
+                                    height:120px;
+                                    left:-150px;
+                                    top:58px;
+                                    width:304px;
+                                    .text {
+                                        @include h5_3850;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .ux {
+                        margin:206px 0 0 0;
+                        .blog_area {
+                            margin:0 366px 0 243px;
+                            .info {
+                                .image {
+                                    height:auto;
+                                    width:1220px;
+                                }
+                                img {
+                                    border-top-left-radius:24.3px;
+                                    border-top-right-radius:24.3px;
+                                }
+                                .info_area {
+                                    border-bottom-left-radius:24.3px;
+                                    border-bottom-right-radius:24.3px;
+                                    .author {
+                                        margin:24.3px 58px 0 0;
+                                    }
+                                    .button {
+                                        border-radius:24.3px;
+                                        margin:157px 0 47px 58px;
+                                        padding:33px 108px 33px 108px;
+                                        a {
+                                            font-size:38px;
+                                            margin-left:24.3px;
+                                        }
+                                        img {
+                                            height:auto;
+                                            width:31px;
+                                        }
+                                    }
+                                    h4 {
+                                        @include h4_3850;
+                                        padding:47px 0 0 58px;
+                                    }
+                                    h5 {
+                                        @include h5_3850;
+                                        margin:24.3px 0 0 58px;
+                                    }
+                                }
+                                .small_info {
+                                    border-radius:24.3px;
+                                    height:120px;
+                                    left:-150px;
+                                    top:58px;
+                                    width:304px;
+                                    .text {
+                                        @include h5_3850;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .contact_section {
+                margin-top:610px;
+                .content_area {
+                    margin:132px 366px 0 366px;
+                    .left_area {
+                        border-bottom-left-radius:24.3px;
+                        border-top-left-radius:24.3px;
+                        .info_block {
+                            p {
+                                font-size:38px;
+                                margin:0 0 0 58px;
+                            }
+                            .social_icons {
+                                .social {
+                                    margin:120px 0 0 33px;
+                                    a {
+                                        margin:24.3px;
+                                        img {
+                                            height:auto;
+                                            width:87px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .resume {
+                            margin:58px 0 243px 58px;
+                        }
+                    }
+                    .right_area {
+                        border-bottom-right-radius:24.3px;
+                        border-top-right-radius:24.3px;
+                        .address {
+                            font-size:38px;
+                            margin-top:24.3px;
+                        }
+                        .icon {
+                            margin:181px 0 0 0;
+                            img {
+                                height:auto;
+                                width:120px;
+                            }
+                        }
+                        .japan {
+                            margin-bottom:58px;
+                        }
+                        .location {
+                            margin-top:24.3px;
+                        }
+                        .offices {
+                            margin:58px 58px 0 0;
+                        }
+                        .top {
+                            margin-top:58px;
+                        }
+                    }
+                }
+                h1 {
+                    @include h1_3850;
+                }
+                h4 {
+                    @include h4_3850;
+                    margin:47px 0 0 47px;
+                }
+                h5 {
+                    @include h5_3850;
+                    margin:120px 0 0 58px;
+                }
+                .heading_container {
+                    .heading {
+                        margin-left:366px;
+                    }
+                }
+            }
+            .earphones_section {
+                margin:120px 0 120px 0;
+                a {
+                    font-size:38px;
+                }
+                .author {
+                    margin:33px 0 0 24px;
+                }
+                .earphones_img {
+                    height:auto;
+                    width:1220px;
+                }
+                h2 {
+                    @include h2_3850;
+                    padding:120px 0 0 366px;
+                }
+                h3 {
+                    @include h3_3850;
+                    margin:58px 0 0 366px;
+                }
+                h4 {
+                    @include h4_3850;
+                    margin-bottom:33px;
+                }
+                img {
+                    margin:58px 0 0 366px;
+                }
+                .info {
+                    margin:33px 0 0 24px;
+                }
+                p {
+                    border-right:4.7px solid $white;
+                    font-size:38px;
+                    margin:33px 0 0 366px;
+                    padding:0 24px 0 0;
+                }
+                .right_zone {
+                    .category_instagram {
+                        margin:366px 354px 0 0;
+                        .category {
+                            margin-left:12px;
+                            a {
+                                margin-bottom:24px;
+                            }
+                        }
+                        .instagram_area {
+                            .instagram {
+                                margin:243px 0 0 0;
+                                .instagram_heading {
+                                    margin-left:12px;
+                                }
+                                .instagram_images {
+                                    margin-top:47px;
+                                    width:828px;
+                                    .instagram_img {
+                                        height:auto;
+                                        margin:12px;
+                                        width:390px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .social_tags {
+                    margin:58px 0 120px 366px;
+                    .social_container {
+                        .social_area {
+                            a {
+                                margin:0 24px 0 0;
+                                .icon {
+                                    height:auto;
+                                    width:87px;
+                                }
+                            }
+                        }
+                    }
+                    .tags_container {
+                        .tags_area {
+                            margin-left:47px;
+                            .tag {
+                                border:2.4px solid $dark;
+                                font-size:31px;
+                                margin-right:4.7px;
+                                padding:12px 24px 12px 24px;
+                            }
+                            .work {
+                                display:none;
+                            }
+                        }
+                    }
+                }
+                .text {
+                    margin:24px 0 0 366px;
+                    width:1833px;
+                }
+            }
+            footer {
+                margin-bottom:120px;
+                margin-top:610px;
+                a {
+                    font-size:38px;
+                    margin:12px;
+                    img {
+                        height:auto;
+                        width:87px;
+                    }
+                }
+                h4 {
+                    @include h4_3850;
+                    margin-bottom:31px;
+                }
+                h5 {
+                    @include h5_3850;
+                    margin-top:24.3px;
+                    padding-bottom:120px;
+                }
+            }
+            .react {
+                margin:120px 0 120px 0;
+                a {
+                    font-size:38px;
+                }
+                .atom {
+                    height:auto;
+                    width:1220px;
+                }
+                .author {
+                    margin:33px 0 0 24px;
+                }
+                h2 {
+                    @include h2_3850;
+                    padding:120px 0 0 366px;
+                }
+                h3 {
+                    @include h3_3850;
+                    margin:58px 0 0 366px;
+                }
+                h4 {
+                    @include h4_3850;
+                    margin-bottom:33px;
+                }
+                img {
+                    margin:58px 0 0 366px;
+                }
+                .info {
+                    margin:33px 0 0 24px;
+                }
+                p {
+                    border-right:4.7px solid $white;
+                    font-size:38px;
+                    margin:33px 0 0 366px;
+                    padding:0 24px 0 0;
+                }
+                .right_zone {
+                    .category_instagram {
+                        margin:366px 354px 0 0;
+                        .category {
+                            margin-left:12px;
+                            a {
+                                margin-bottom:24px;
+                            }
+                        }
+                        .instagram_area {
+                            .instagram {
+                                margin:243px 0 0 0;
+                                .instagram_heading {
+                                    margin-left:12px;
+                                }
+                                .instagram_images {
+                                    margin-top:47px;
+                                    width:828px;
+                                    .instagram_img {
+                                        height:auto;
+                                        margin:12px;
+                                        width:390px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .social_tags {
+                    margin:58px 0 120px 366px;
+                    .social_container {
+                        .social_area {
+                            a {
+                                margin:0 24px 0 0;
+                                .icon {
+                                    height:auto;
+                                    width:87px;
+                                }
+                            }
+                        }
+                    }
+                    .tags_container {
+                        .tags_area {
+                            margin-left:47px;
+                            .state {
+                                display:none;
+                            }
+                            .tag {
+                                border:2.4px solid $dark;
+                                font-size:31px;
+                                margin-right:4.7px;
+                                padding:12px 24px 12px 24px;
+                            }
+                        }
+                    }
+                }
+                .text {
+                    margin:24px 0 0 366px;
+                    width:1833px;
+                }
+            }
+            .tools {
+                margin:120px 0 120px 0;
+                a {
+                    font-size:38px;
+                }
+                .author {
+                    margin:33px 0 0 24px;
+                }
+                h2 {
+                    @include h2_3850;
+                    padding:120px 0 0 366px;
+                }
+                h3 {
+                    @include h3_3850;
+                    margin:58px 0 0 366px;
+                }
+                h4 {
+                    @include h4_3850;
+                    margin-bottom:33px;
+                }
+                img {
+                    margin:58px 0 0 366px;
+                }
+                .info {
+                    margin:33px 0 0 24px;
+                }
+                .laptop {
+                    height:auto;
+                    width:1220px;
+                }
+                p {
+                    border-right:4.7px solid $white;
+                    font-size:38px;
+                    margin:33px 0 0 366px;
+                    padding:0 24px 0 0;
+                }
+                .right_zone {
+                    .category_instagram {
+                        margin:366px 354px 0 0;
+                        .category {
+                            margin-left:12px;
+                            a {
+                                margin-bottom:24px;
+                            }
+                        }
+                        .instagram_area {
+                            .instagram {
+                                margin:243px 0 0 0;
+                                .instagram_heading {
+                                    margin-left:12px;
+                                }
+                                .instagram_images {
+                                    margin-top:47px;
+                                    width:828px;
+                                    .instagram_img {
+                                        height:auto;
+                                        margin:12px;
+                                        width:390px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .social_tags {
+                    margin:58px 0 120px 366px;
+                    .social_container {
+                        .social_area {
+                            a {
+                                margin:0 24px 0 0;
+                                .icon {
+                                    height:auto;
+                                    width:87px;
+                                }
+                            }
+                        }
+                    }
+                    .tags_container {
+                        .tags_area {
+                            margin-left:47px;
+                            .arguments {
+                                display:none;
+                            }
+                            .tag {
+                                border:2.4px solid $dark;
+                                font-size:31px;
+                                margin-right:4.7px;
+                                padding:12px 24px 12px 24px;
+                            }
+                        }
+                    }
+                }
+                .text {
+                    margin:24px 0 0 366px;
+                    width:1833px;
+                }
+            }
+            .uxui_section {
+                margin:120px 0 120px 0;
+                a {
+                    font-size:38px;
+                }
+                .author {
+                    margin:33px 0 0 24px;
+                }
+                h2 {
+                    @include h2_3850;
+                    padding:120px 0 0 366px;
+                }
+                h3 {
+                    @include h3_3850;
+                    margin:58px 0 0 366px;
+                }
+                h4 {
+                    @include h4_3850;
+                    margin-bottom:33px;
+                }
+                img {
+                    margin:58px 0 0 366px;
+                }
+                .info {
+                    margin:33px 0 0 24px;
+                }
+                p {
+                    border-right:4.7px solid $white;
+                    font-size:38px;
+                    margin:33px 0 0 366px;
+                    padding:0 24px 0 0;
+                }
+                .right_zone {
+                    .category_instagram {
+                        margin:366px 354px 0 0;
+                        .category {
+                            margin-left:12px;
+                            a {
+                                margin-bottom:24px;
+                            }
+                        }
+                        .instagram_area {
+                            .instagram {
+                                margin:243px 0 0 0;
+                                .instagram_heading {
+                                    margin-left:12px;
+                                }
+                                .instagram_images {
+                                    margin-top:47px;
+                                    width:828px;
+                                    .instagram_img {
+                                        height:auto;
+                                        margin:12px;
+                                        width:390px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .social_tags {
+                    margin:58px 0 120px 366px;
+                    .social_container {
+                        .social_area {
+                            a {
+                                margin:0 24px 0 0;
+                                .icon {
+                                    height:auto;
+                                    width:87px;
+                                }
+                            }
+                        }
+                    }
+                    .tags_container {
+                        .tags_area {
+                            margin-left:47px;
+                            .skills {
+                                display:none;
+                            }
+                            .tag {
+                                border:2.4px solid $dark;
+                                font-size:31px;
+                                margin-right:4.7px;
+                                padding:12px 24px 12px 24px;
+                            }
+                        }
+                    }
+                }
+                .text {
+                    margin:24px 0 0 366px;
+                    width:1833px;
+                }
+                .ux_img {
+                    height:auto;
+                    width:1220px;
+                }
+            }
+            .works_section {
+                margin-top:610px;
+                h1 {
+                    @include h1_3850;
+                    margin-left:366px;
+                }
+                .images {
+                    margin-top:58px;
+                    .block {
+                        margin-left:304px;
+                        margin-right:304px;
+                        .left {
+                            .img_area {
+                                margin:58px;
+                                img {
+                                    border-radius:24px;
+                                    height:auto;
+                                    width:1563px;
+                                }
+                            }
+                        }
+                        .right {
+                            .img_area {
+                                margin:58px;
+                                img {
+                                    border-radius:24px;
+                                    height:auto;
+                                    width:1563px;
+                                }
+                            }
+                        }
+                    }
+                }
+                ul {
+                    height:82px;
+                    margin-left:330px;
+                    margin-top:96px;
+                    width:1466px;
+                    .first {
+                        border:2.43px solid $bluegreen;
+                        border-radius:12px;
+                    }
+                    li {
+                        border:2.43px solid transparent;
+                        border-radius:12px;
+                        font-size:38px;
+                        margin:0 36px 0 36px;
+                    }
+                }
+            }
+        }
+    }
+}

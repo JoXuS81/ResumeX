@@ -14,6 +14,7 @@ $(".close").click(function() {
     $(".close").delay(1000).hide();
     $(".form").delay(1000).hide();
     $(".searchImg").delay(1000).show();
+    $(".soc").delay(1000).show();
 }); 
 
 
@@ -22,6 +23,7 @@ $(".searchImg").click(function() {
     $(".close").delay(1000).show();
     $(".form").delay(1000).show();
     $(".searchImg").delay(1000).hide();
+    $(".soc").delay(1000).hide();
 }); 
 
 
